@@ -1,0 +1,21 @@
+﻿<Obfuscator>
+<Var name='InPath' value='C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\win-x64\' />
+<Var name='OutPath' value='C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\win-x64\Obfuscated' />
+<Var name='KeepPublicApi' value='false' />
+<Var name='HidePrivateApi' value='true' />
+<Var name='RenameProperties' value='true' />
+<Var name='RenameEvents' value='true' />
+<Var name='RenameFields' value='true' />
+<Var name='UseUnicodeNames' value='false' />
+<Var name='HideStrings' value='true' />
+<Var name='OptimizeMethods' value='false' />
+<Var name='SuppressIldasm' value='true' />
+<AssemblySearchPath path='C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\8.0.27' />
+<AssemblySearchPath path='C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.27' />
+<Module file='C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\win-x64\PCOptimizer.dll'>
+<SkipNamespace name='PCOptimizer' />
+<SkipNamespace name='PCOptimizer.Views' />
+<SkipNamespace name='PCOptimizer.Models' />
+<SkipType name='PCOptimizer.Services.SecurityGuard' />
+</Module>
+</Obfuscator>

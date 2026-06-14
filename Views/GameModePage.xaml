@@ -1,0 +1,191 @@
+<Page x:Class="PCOptimizer.Views.GameModePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCOptimizer.Views"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="850"
+      Title="Games Library">
+
+    <Grid Background="Transparent" Margin="24,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Grid.Row="0" Margin="0,0,0,16">
+            <StackPanel>
+                <TextBlock x:Name="PageTitleText" Text="Pusat Game Booster" FontSize="26" FontWeight="Bold" Foreground="White" />
+                <TextBlock x:Name="PageSubtitleText" Text="Optimalkan rute jaringan (ping), prioritaskan CPU, dan luncurkan game favorit Anda dengan mode boost otomatis." FontSize="12" Foreground="#8F9CAE" Margin="0,4,0,0" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Library Header Row -->
+        <Grid Grid.Row="1" Margin="0,0,0,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <ui:SymbolIcon Symbol="Grid24" Filled="True" FontSize="16" Foreground="White" VerticalAlignment="Center"/>
+                <TextBlock x:Name="LibraryTitleText" Text="Perpustakaan Game Utama" FontSize="15" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="8,0,0,0"/>
+            </StackPanel>
+
+            <!-- Actions (Add & Refresh) -->
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <ui:Button x:Name="AddGameBtn" Content="Tambah Game" Click="AddGameBtn_Click" Style="{StaticResource OutlineButtonStyle}" Height="32" Margin="0,0,8,0" Padding="12,0"/>
+                <ui:Button x:Name="RefreshBtn" Icon="ArrowClockwise24" Click="RefreshBtn_Click" Style="{StaticResource OutlineButtonStyle}" Width="36" Height="32" Padding="0"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Games Grid (launcher-style ItemsControl) -->
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="GamesGridItemsControl" Margin="0,0,0,12">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="3" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="0" Height="360" ClipToBounds="True" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="140"/> <!-- Banner Image -->
+                                    <RowDefinition Height="Auto"/> <!-- Game Title -->
+                                    <RowDefinition Height="*"/>    <!-- Stats Details -->
+                                    <RowDefinition Height="Auto"/> <!-- Action Buttons -->
+                                </Grid.RowDefinitions>
+
+                                <!-- Row 0: Banner Image (Clickable for details navigation) -->
+                                <Grid Grid.Row="0" MouseLeftButtonDown="GamePoster_Click" Cursor="Hand" Background="#111625">
+                                    <!-- Placeholder background content in case the image fails to load or is loading -->
+                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <ui:SymbolIcon Symbol="Games24" Filled="True" FontSize="36" Foreground="#FF9100" Opacity="0.2"/>
+                                        <TextBlock Text="{Binding Name}" FontSize="10" FontWeight="Bold" Foreground="#323C52" HorizontalAlignment="Center" Margin="0,4,0,0" TextTrimming="CharacterEllipsis" MaxWidth="150"/>
+                                    </StackPanel>
+
+                                    <!-- Actual Game Cover Image -->
+                                    <Image Source="{Binding CoverImagePath}" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    
+                                    <!-- Running indicator overlay -->
+                                    <Border Background="#A0000000" Visibility="{Binding IsRunning, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <ui:SymbolIcon Symbol="CheckmarkCircle24" Filled="True" FontSize="26" Foreground="#00E676"/>
+                                            <TextBlock Text="{Binding BoostedLabel}" FontSize="9" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+
+                                <!-- Row 1: Game Title -->
+                                <TextBlock Grid.Row="1" Text="{Binding Name}" FontSize="13.5" FontWeight="Bold" Foreground="White" Margin="14,12,14,0" TextAlignment="Left" TextTrimming="CharacterEllipsis"/>
+
+                                <!-- Row 2: Stats Details (FPS, Ping, Performance Indicator) -->
+                                <StackPanel Grid.Row="2" Margin="14,8,14,10">
+                                    <!-- FPS status line -->
+                                    <Grid Margin="0,3">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding FpsBoostLabel}" FontSize="10.5" Foreground="#8F9CAE" VerticalAlignment="Center"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding FpsBoostStatus}" FontSize="10.5" FontWeight="Bold" VerticalAlignment="Center">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding IsOptimized}" Value="True">
+                                                            <Setter Property="Foreground" Value="#00E676"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding IsOptimized}" Value="False">
+                                                            <Setter Property="Foreground" Value="#8F9CAE"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Grid>
+
+                                    <!-- Ping Status line -->
+                                    <Grid Margin="0,3">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding PingTweakLabel}" FontSize="10.5" Foreground="#8F9CAE" VerticalAlignment="Center"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding PingOptimization}" FontSize="10.5" FontWeight="Bold" VerticalAlignment="Center">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding IsOptimized}" Value="True">
+                                                            <Setter Property="Foreground" Value="#00F2FE"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding IsOptimized}" Value="False">
+                                                            <Setter Property="Foreground" Value="#8F9CAE"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </Grid>
+
+                                    <!-- Performance Indicator badge line -->
+                                    <Grid Margin="0,4,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding TargetPresetLabel}" FontSize="10.5" Foreground="#8F9CAE" VerticalAlignment="Center"/>
+                                        <Border Grid.Column="1" Background="#1D2A44" BorderBrush="#00F2FE" BorderThickness="1" CornerRadius="4" Padding="6,2" VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding PerformanceIndicator}" FontSize="8.5" FontWeight="Bold" Foreground="#00F2FE"/>
+                                        </Border>
+                                    </Grid>
+                                </StackPanel>
+
+                                <!-- Row 3: Action Buttons (Launch & Optimize) -->
+                                <Grid Grid.Row="3" Margin="14,0,14,14">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Launch Button (solid orange) -->
+                                    <ui:Button Grid.Column="0" Content="{Binding LaunchLabel}" Click="LaunchGame_Click" Style="{StaticResource ActionButtonStyle}" Height="30" Padding="0" Margin="0,0,4,0"/>
+
+                                    <!-- Optimize Button (solid blue) -->
+                                    <Grid Grid.Column="1" Margin="4,0,0,0">
+                                        <ui:Button x:Name="OptimizeGameBtn" Content="{Binding OptimizeLabel}" Click="OptimizeGame_Click" Height="30" Padding="0" HorizontalAlignment="Stretch">
+                                            <ui:Button.Style>
+                                                <Style TargetType="ui:Button" BasedOn="{StaticResource OutlineButtonStyle}">
+                                                    <Setter Property="Background" Value="#007ACC"/>
+                                                    <Setter Property="Foreground" Value="White"/>
+                                                    <Setter Property="BorderThickness" Value="0"/>
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Background" Value="#1C92D2"/>
+                                                        </Trigger>
+                                                        <DataTrigger Binding="{Binding IsOptimized}" Value="True">
+                                                            <Setter Property="Background" Value="#122A1E"/>
+                                                            <Setter Property="Foreground" Value="#00E676"/>
+                                                            <Setter Property="BorderBrush" Value="#00E676"/>
+                                                            <Setter Property="BorderThickness" Value="1"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </ui:Button.Style>
+                                        </ui:Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,15 @@
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\PCOptimizer.exe
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\PCOptimizer.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\PCOptimizer.runtimeconfig.json
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\PCOptimizer.pdb
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\LiveCharts.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\LiveCharts.Wpf.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\MaterialDesignColors.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\MaterialDesignThemes.Wpf.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\System.CodeDom.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\System.Management.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\Wpf.Ui.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\Wpf.Ui.Abstractions.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\runtimes\win\lib\net8.0\System.Management.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\bin\Release\net8.0-windows7.0\publish\PCOptimizer.deps.json

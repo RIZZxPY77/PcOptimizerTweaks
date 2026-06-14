@@ -1,0 +1,130 @@
+﻿$logPath = "C:\Users\Administrator\.gemini\antigravity\brain\39ef13f9-0c8e-44db-8206-20de30fa126f\.system_generated\logs\transcript.jsonl"
+$lines = Get-Content -Path $logPath -Encoding UTF8
+
+$part1 = ""
+$part2 = ""
+
+# Loop backwards to find the most recent view_file results
+for ($i = $lines.Length - 1; $i -ge 0; $i--) {
+    $line = $lines[$i]
+    if ($line.Contains("Showing lines 1 to 800") -and $line.Contains("TranslationService.cs") -and $line.Contains('"type":"VIEW_FILE"')) {
+        if ($part1 -eq "") {
+            Write-Host "Found part 1 at line $i"
+            $json = ConvertFrom-Json $line
+            $part1 = $json.content
+        }
+    }
+    if ($line.Contains("Showing lines 800 to 1399") -and $line.Contains("TranslationService.cs") -and $line.Contains('"type":"VIEW_FILE"')) {
+        if ($part2 -eq "") {
+            Write-Host "Found part 2 at line $i"
+            $json = ConvertFrom-Json $line
+            $part2 = $json.content
+        }
+    }
+}
+
+if ($part1 -eq "" -or $part2 -eq "") {
+    Write-Error "Could not find both parts of the file in logs."
+    exit 1
+}
+
+# Function to clean and extract lines
+function Clean-Part($partText) {
+    # Split by newlines (logs use \n for newlines in JSON strings)
+    $lines = $partText -split "\n"
+    
+    $cleanLines = @()
+    foreach ($l in $lines) {
+        # Check if line matches "<number>: <content>"
+        if ($l -match "^\s*(\d+):\s?(.*)$") {
+            $cleanLines += $Matches[2]
+        }
+    }
+    return $cleanLines
+}
+
+$cleanPart1 = Clean-Part $part1
+$cleanPart2 = Clean-Part $part2
+
+Write-Host "Part 1 clean lines: $($cleanPart1.Count)"
+Write-Host "Part 2 clean lines: $($cleanPart2.Count)"
+
+if ($cleanPart1.Count -eq 0 -or $cleanPart2.Count -eq 0) {
+    Write-Error "Clean lines count is zero. Check regex matching."
+    exit 1
+}
+
+# Combine the parts.
+$finalLines = @()
+$finalLines += $cleanPart1[0..798] # 1 to 799
+$finalLines += $cleanPart2 # 800 to end
+
+$finalText = $finalLines -join "`r`n"
+$finalText | Out-File -FilePath "c:\Users\Administrator\Documents\optimize\PCOptimizer\Services\TranslationService.cs" -Encoding UTF8
+Write-Host "Successfully restored original TranslationService.cs!"
+
+$logPath = "C:\Users\Administrator\.gemini\antigravity\brain\39ef13f9-0c8e-44db-8206-20de30fa126f\.system_generated\logs\transcript.jsonl"
+$lines = Get-Content -Path $logPath -Encoding UTF8
+
+$part1 = ""
+$part2 = ""
+
+# Loop backwards to find the most recent view_file results
+for ($i = $lines.Length - 1; $i -ge 0; $i--) {
+    $line = $lines[$i]
+    if ($line.Contains("Showing lines 1 to 800") -and $line.Contains("TranslationService.cs") -and $line.Contains('"type":"VIEW_FILE"')) {
+        if ($part1 -eq "") {
+            Write-Host "Found part 1 at line $i"
+            $json = ConvertFrom-Json $line
+            $part1 = $json.content
+        }
+    }
+    if ($line.Contains("Showing lines 800 to 1399") -and $line.Contains("TranslationService.cs") -and $line.Contains('"type":"VIEW_FILE"')) {
+        if ($part2 -eq "") {
+            Write-Host "Found part 2 at line $i"
+            $json = ConvertFrom-Json $line
+            $part2 = $json.content
+        }
+    }
+}
+
+if ($part1 -eq "" -or $part2 -eq "") {
+    Write-Error "Could not find both parts of the file in logs."
+    exit 1
+}
+
+# Function to clean and extract lines
+function Clean-Part($partText) {
+    # Split by newlines (logs use \n for newlines in JSON strings)
+    $lines = $partText -split "\n"
+    
+    $cleanLines = @()
+    foreach ($l in $lines) {
+        # Check if line matches "<number>: <content>"
+        if ($l -match "^\s*(\d+):\s?(.*)$") {
+            $cleanLines += $Matches[2]
+        }
+    }
+    return $cleanLines
+}
+
+$cleanPart1 = Clean-Part $part1
+$cleanPart2 = Clean-Part $part2
+
+Write-Host "Part 1 clean lines: $($cleanPart1.Count)"
+Write-Host "Part 2 clean lines: $($cleanPart2.Count)"
+
+if ($cleanPart1.Count -eq 0 -or $cleanPart2.Count -eq 0) {
+    Write-Error "Clean lines count is zero. Check regex matching."
+    exit 1
+}
+
+# Combine the parts.
+$finalLines = @()
+$finalLines += $cleanPart1[0..798] # 1 to 799
+$finalLines += $cleanPart2 # 800 to end
+
+$finalText = $finalLines -join "`r`n"
+$finalText | Out-File -FilePath "c:\Users\Administrator\Documents\optimize\PCOptimizer\Services\TranslationService.cs" -Encoding UTF8
+Write-Host "Successfully restored original TranslationService.cs!"
+

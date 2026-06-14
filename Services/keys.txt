@@ -1,0 +1,208 @@
+﻿Menu_dashboard ||| Dashboard
+Menu_optimizer ||| PC Optimizer
+Menu_game_booster ||| Game Booster
+Menu_mouse_keyboard ||| Mouse & Keyboard
+Menu_emulator ||| Emulator Gaming
+Menu_startup ||| Startup Manager
+Menu_profile ||| Profile
+Menu_about ||| About
+Login_Title ||| CLAYX Login
+Login_DragBar ||| CLAYX OPTIMIZER LICENSE
+Login_Brand1 ||| CLAYX-TEAM OPTIMIZE
+Login_Brand2 ||| Premium VIP App - Active License Required
+Login_WarningTitle ||| VIP USAGE WARNING
+Login_WarningBody ||| Before using the application, please understand the function of each feature. Please do not enable features without knowing the specific problems of your PC or laptop to avoid system malfunction.
+Login_InputLabel ||| Enter VIP License Code
+Login_Placeholder ||| Enter your VIP License...
+Login_Btn ||| LOG IN TO APPLICATION
+Login_Footer ||| This application is Premium VIP. Contact us to purchase a license.
+Login_EmptyKey ||| Please enter your license key.
+Dash_Title ||| CLAYX-TEAM OPTIMIZE
+Dash_Subtitle ||| Boost-Ups — Keep your PC running at peak performance with essential maintenance and performance tuning.
+Dash_QuickBoost ||| ⚡ QUICK BOOST
+Dash_CpuLoad ||| CPU LOAD
+Dash_RamUsage ||| RAM UTILITY
+Dash_Reclaimed ||| TOTAL RECLAIMED
+Dash_SearchPlaceholder ||| Search Boost-Ups...
+Dash_TabRecommended ||| Recommended
+Dash_TabSystem ||| System
+Dash_TabGaming ||| Gaming
+Dash_TabHardware ||| Hardware
+Dash_RecTitle ||| Recommended For You
+Dash_SysTitle ||| System Utilities & Cleaning
+Dash_CatTitle ||| {0} Category Features
+Dash_DetailsTitle ||| Action Details
+Dash_RunClean ||| Run Cleanup
+Dash_ApplyOpt ||| Apply Optimization
+Dash_RunDns ||| Run DNS Optimizer
+Opt_Title ||| PC Optimization Center
+Opt_Subtitle ||| Select optimization tier based on your PC specifications for maximum performance.
+Opt_SelectProfile ||| Select Performance Profile
+Opt_LowTitle ||| Low-End PC (Middle Low)
+Opt_LowDesc ||| Prioritizes performance over visuals. Disables system animations, limits Windows visuals, stops background telemetry, and saves maximum RAM.
+Opt_MidTitle ||| Mid-End PC (Balanced)
+Opt_MidDesc ||| Balance between system performance and visuals. Safely cleans junk files, activates high performance power plan, and optimizes Windows services.
+Opt_HighTitle ||| High-End PC (Ultimate Performance)
+Opt_HighDesc ||| Activates Ultimate Performance power plan, prioritizes CPU for active games/apps, disables network throttling, and enables Windows Game Mode.
+Opt_ExtraTitle ||| Extra Performance Utilities
+Opt_ExtraNetTitle ||| Network Latency & Ping Optimization
+Opt_ExtraNetDesc ||| Applies TCP Delay tweaks & flushes DNS for a stable ping.
+Opt_ExtraTrimTitle ||| SSD TRIM (Storage Optimization)
+Opt_ExtraTrimDesc ||| Runs retrim on SSD drives to maintain write/read speed stability.
+Opt_ExtraJunkTitle ||| Deep Junk Cleaning (Deep Clean)
+Opt_ExtraJunkDesc ||| Includes Windows Temp folder, Prefetch, Log Files, and Recycle Bin.
+Opt_ApplyBtn ||| APPLY PC BOOST
+Opt_LogTitle ||| OPTIMIZATION PROCESS LOG
+Opt_ReadyLog ||| Ready for optimization...
+Mouse_Title ||| Input Latency Optimization
+Mouse_Subtitle ||| Optimize sensitivity, polling priority, and minimize input latency for competitive gaming.
+Mouse_AimTitle ||| Mouse Accuracy & Aim Stabilizer
+Mouse_AimDesc ||| Permanently disables Windows mouse acceleration and applies MarkC Registry 1:1 Pixel Match.
+Mouse_KbTitle ||| Keyboard Input Latency
+Mouse_KbDesc ||| Sets keyboard delay to 0 and increases input handling frequency in Windows for instant response.
+Mouse_UsbTitle ||| USB Port Power Optimization
+Mouse_UsbDesc ||| Disables USB selective suspend to prevent USB peripherals from suddenly entering power-saving mode.
+Mouse_PollTitle ||| USB Mouse Interrupt Priority
+Mouse_PollDesc ||| Allocates high priority CPU interrupts specifically to USB mouse ports 1000Hz+ to stabilize aim.
+Mouse_SensiTitle ||| Sensitivity Tuning
+Mouse_PointerSpeed ||| Pointer Speed
+Mouse_SensiX ||| Sensitivity X
+Mouse_SensiY ||| Sensitivity Y
+Mouse_ApplySensi ||| APPLY SENSITIVITY
+Mouse_HardwareTitle ||| Hardware Parameters
+Mouse_Dpi ||| Mouse DPI
+Mouse_Hz ||| Polling Rate (Hz)
+Mouse_ApplyHardware ||| APPLY HARDWARE CONFIG
+Mouse_ConfigTitle ||| Configuration Profile Manager
+Mouse_AutoSave ||| Auto-Save Settings to Registry
+Mouse_Import ||| IMPORT CONFIG
+Mouse_Export ||| EXPORT CONFIG
+Game_Title ||| Game Booster Center
+Game_Subtitle ||| Optimize network routing (ping), prioritize CPU, and launch your favorite games with auto-boost mode.
+Game_LibTitle ||| Main Games Library
+Game_Add ||| Add Game
+Game_Boosted ||| BOOSTED
+Game_FpsBoost ||| FPS Boost
+Game_PingOpt ||| Ping Optimizer
+Game_Status ||| Launch Status
+Game_Details ||| Game Info & Details
+Game_Running ||| Running
+Game_Ready ||| Ready to Boost
+Game_LaunchBtn ||| LAUNCH GAME (BOOST)
+Game_StopBtn ||| TERMINATE GAME PROCESS
+Game_SaveBtn ||| Save Game Settings
+Game_PriorityLabel ||| CPU Allocation Priority
+Emu_Title ||| Emulator Gaming Mode
+Emu_Subtitle ||| Special optimizations for Android emulators like BlueStacks, LDPlayer, GameLoop, and App Players.
+Emu_Detected ||| Detected Emulator Launchers
+Emu_NotRunning ||| Not Running
+Emu_Running ||| Running
+Emu_Active ||| ACTIVE
+Emu_Inactive ||| INACTIVE
+Emu_OptimizeBtn ||| OPTIMIZE NOW
+Emu_InactiveBtn ||| EMULATOR INACTIVE
+Emu_VirtTitle ||| BIOS Virtualization Active
+Emu_VirtDesc ||| Intel VT-x/AMD-V technology is enabled. Emulators can run at full performance.
+Emu_VirtTitleOff ||| BIOS Virtualization Inactive
+Emu_VirtDescOff ||| Virtualization is disabled. Please enable Intel VT-x/AMD-V in BIOS to prevent lag.
+Emu_GpuTitle ||| GPU & Power Optimization
+Emu_GpuDesc ||| Every emulator game heavily depends on dedicated GPU power optimization.
+Emu_GpuAc ||| Dedicated GPU Priority
+Emu_GpuAcDesc ||| Ensure Windows Graphics settings are set to 'High Performance' for the emulator player executable (.exe) to run on NVIDIA/AMD dedicated GPU, not CPU integrated graphics.
+Emu_CpuPolicy ||| Physical Core Policy
+Emu_CpuPolicyDesc ||| Clicking 'OPTIMIZE NOW' locks the active emulator to run exclusively on CPU physical cores, avoiding thread contention.
+Start_Title ||| Startup Manager
+Start_Subtitle ||| Disable auto-start apps to speed up your PC boot time.
+Start_Impact ||| Impact: {0}
+Start_ScanBtn ||| RE-SCAN STARTUP
+Start_High ||| High
+Start_Medium ||| Medium
+Start_Low ||| Low
+Prof_Title ||| User Profile
+Prof_Subtitle ||| Application license information, hardware details, and public account status.
+Prof_AccountType ||| Account Type
+Prof_PremiumAccess ||| Premium VIP Access
+Prof_ServerStatus ||| Server Status
+Prof_Connected ||| Connected
+Prof_ActiveDuration ||| Active Duration
+Prof_DetailsHeader ||| LICENSE DETAILS
+Prof_LicenseCode ||| License Code
+Prof_Expiry ||| Expiration Date
+Prof_Verify ||| Verification Status
+Prof_Verified ||| Verified (VIP)
+Prof_DeviceHeader ||| DEVICE DETAILS
+Prof_CopyBtn ||| Copy HWID
+About_Title ||| About CLAYX OPTIMIZER
+About_Subtitle ||| Developer details, contributors, and the CLAYX team vision.
+About_Creator ||| Main Creator
+About_CreatorRole ||| RizzXiters
+About_CreatorDesc ||| Core developer who designed the entire architecture of optimization, memory tuning, latency, and UI.
+About_Founder ||| Founder & Brain Dev
+About_FounderDesc ||| The founder, mastermind of team development, and primary support for Clayx Team infrastructure.
+About_Sales ||| Sales & Market Support
+About_SalesDesc ||| Helps and provides support for sales, marketing, and premium license distribution.
+About_VisionTitle ||| APPLICATION VISION & CREDITS
+About_VisionDesc ||| CLAYX-TEAM OPTIMIZE was developed with the vision to deliver safe, reliable Windows optimization tools. We combine advanced performance tweaks in a modern Fluent UI.
+About_ThankYou ||| The team expresses gratitude to our active community and users who provided feedback to make this possible.
+About_MadeBy ||| DEVELOPED BY CLAYX TEAM
+Mouse_Activate ||| Activate
+Mouse_HardwareFooter ||| *This setting aligns Windows registry precision to match your physical device.
+Mouse_AutoSaveDesc ||| Automatically saves changes to the registry
+Mouse_ConfigDesc ||| Export all your mouse, keyboard, and DPI/Hz parameter optimization settings to a JSON file, or load your settings back.
+Sub_Recommended ||| Recommended
+Sub_System ||| System & Clean
+Sub_Gaming ||| Gaming
+Sub_Hardware ||| Hardware & Boot
+Tweak_ram_cleaner_name ||| RAM Cache Cleaner
+Tweak_ram_cleaner_desc ||| Frees up RAM standby list and working set memory to make room for games.
+Tweak_ram_cleaner_detail ||| Frees up the Windows Standby Memory List and releases the RAM working set owned by background processes.
+Tweak_temp_cleaner_name ||| Temp Files Cleaner
+Tweak_temp_cleaner_desc ||| Safely cleans the user Temp folder and Windows system Temp folder.
+Tweak_temp_cleaner_detail ||| Deletes temporary logs, user crash dumps, and system updates cache (%TEMP% & C:\\Windows\\Temp).
+Tweak_dns_optimizer_name ||| DNS Latency Optimizer
+Tweak_dns_optimizer_desc ||| Flushes DNS cache and sets the fastest DNS for stable online game routing.
+Tweak_dns_optimizer_detail ||| Flushes DNS cache and sets the fastest DNS configuration.
+Tweak_junk_cleaner_name ||| Deep Junk Cleaner
+Tweak_junk_cleaner_desc ||| Deep junk file cleaner including Prefetch, Recycle Bin, and Logs.
+Tweak_junk_cleaner_detail ||| Includes deep cleaning of Temp folders, Prefetch, Log Files, and Recycle Bin.
+Tweak_shader_cleaner_name ||| Shader Cache Purge
+Tweak_shader_cleaner_desc ||| Cleans old DirectX shaders and GPU cache to reduce game stuttering.
+Tweak_shader_cleaner_detail ||| Deletes DirectX shader cache (D3DSCache), NVIDIA (DXCache), GLCache, and AMD render cache.
+Tweak_network_boost_name ||| Network Packet Optimizer
+Tweak_network_boost_desc ||| Disables Network Throttling Index and enables TcpAckFrequency.
+Tweak_network_boost_detail ||| Configures TcpAckFrequency = 1, TCPNoDelay = 1, and disables network throttling index.
+Tweak_gpu_boost_name ||| GPU Priority Scheduler
+Tweak_gpu_boost_desc ||| Enables HAGS power mode and prioritizes GPU tasks for foreground gaming.
+Tweak_gpu_boost_detail ||| ⚠️ Enabling HAGS (Hardware Accelerated GPU Scheduling) requires a PC RESTART. Raises GPU Task scheduler allocation priority for active games.
+Tweak_cpu_boost_name ||| CPU Priority Separator
+Tweak_cpu_boost_desc ||| Sets active game CPU thread allocation priority above background processes.
+Tweak_cpu_boost_detail ||| Changes Win32PrioritySeparation to 26 (0x1A) to prioritize active game CPU time slice allocation.
+Tweak_service_optimizer_name ||| Telemetry Service Opt
+Tweak_service_optimizer_desc ||| Safely stops non-essential Windows diagnostic telemetry services.
+Tweak_service_optimizer_detail ||| Disables Connected User Experiences (telemetry), WAP Push message routing, and Windows Error reporting.
+Tweak_startup_optimizer_name ||| Startup Apps Manager
+Tweak_startup_optimizer_desc ||| Reduces startup delay by disabling unnecessary auto-start applications.
+Tweak_startup_optimizer_detail ||| Redirects navigation to the Startup Manager to select boot applications.
+Tweak_prefetch_cleaner_name ||| Prefetch Cache Cleaner
+Tweak_prefetch_cleaner_desc ||| Removes old prefetch files to refresh the Windows directory cache database.
+Tweak_prefetch_cleaner_detail ||| Deletes temporary indexing files in the Prefetch directory C:\\Windows\\Prefetch.
+Tweak_registry_cleaner_name ||| Safe Registry Purge
+Tweak_registry_cleaner_desc ||| Safely cleans Explorer TypedPaths and registry navigation cache logs.
+Tweak_registry_cleaner_detail ||| Cleans Explorer TypedPaths cache logs and MuiCache shell registrations.
+Tweak_discord_cache_name ||| Discord Cache Clean
+Tweak_discord_cache_desc ||| Cleans image cache and fragmented media files from Discord.
+Tweak_discord_cache_detail ||| Deletes cache and code cache data in %appdata%\\discord. Discord will be closed.
+Tweak_browser_cache_name ||| Browser Cache Clean
+Tweak_browser_cache_desc ||| Cleans Chrome, Edge, and Firefox cache without deleting cookies/logins.
+Tweak_browser_cache_detail ||| Safe clean: Only targets Chrome, Edge, and Firefox cache folders. Cookies & Sandboxed logins are SAFE.
+Prof_Days ||| Days
+Prof_Hours ||| Hours
+Prof_Minutes ||| Minutes
+Prof_Seconds ||| Seconds
+Prof_Lifetime ||| Lifetime
+Prof_Expired ||| Expired
+Prof_SubSysInfo ||| Subscription & System Information
+Prof_CompName ||| Computer Name
+Prof_LocalIp ||| Local IP Address
+Prof_OsInfo ||| OPERATING SYSTEM INFORMATION
+Prof_OsVersionLabel ||| OS Version

@@ -1,0 +1,139 @@
+<Page x:Class="PCOptimizer.Views.OptimizerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCOptimizer.Views"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="850"
+      Title="Optimizer">
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0">
+            <TextBlock x:Name="PageHeader" Text="Pusat Optimasi PC" Style="{StaticResource HeaderTextPageStyle}" />
+            <TextBlock x:Name="PageSubtitle" Text="Pilih tingkat optimasi berdasarkan spesifikasi PC Anda untuk performa maksimum." Style="{StaticResource SubtitleTextPageStyle}" />
+        </StackPanel>
+ 
+        <!-- Configuration Grid -->
+        <Grid Grid.Row="1" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+ 
+            <!-- Profiles Selector -->
+            <StackPanel Grid.Column="0" Margin="0,0,12,0">
+                <TextBlock x:Name="ProfileTitle" Text="Pilih Profil Performa" FontSize="15" FontWeight="Bold" Foreground="White" Margin="8,0,0,12"/>
+                
+                <!-- Low-End Profile Card -->
+                <Border x:Name="LowCard" Style="{StaticResource GlowCardStyle}" MouseLeftButtonDown="LowCard_Click" Cursor="Hand" Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton x:Name="LowRadio" Grid.Column="0" IsChecked="False" VerticalAlignment="Center" Margin="0,0,12,0" Click="LowRadio_Click"/>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock x:Name="LowTitleText" Text="PC Low-End (Middle Low)" FontSize="14" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock x:Name="LowDescText" Text="Mengutamakan performa daripada visual. Menonaktifkan animasi sistem, membatasi visual Windows, menghentikan telemetri background, dan menghemat RAM maksimal." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+ 
+                <!-- Mid-End Profile Card -->
+                <Border x:Name="MidCard" Style="{StaticResource GlowCardStyle}" MouseLeftButtonDown="MidCard_Click" Cursor="Hand" Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton x:Name="MidRadio" Grid.Column="0" IsChecked="True" VerticalAlignment="Center" Margin="0,0,12,0" Click="MidRadio_Click"/>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock x:Name="MidTitleText" Text="PC Mid-End (Seimbang)" FontSize="14" FontWeight="Bold" Foreground="White"/>
+                            <TextBlock x:Name="MidDescText" Text="Keseimbangan antara performa sistem dan visual. Melakukan pembersihan file sampah secara aman, mengaktifkan power plan performa tinggi, dan mengoptimasi layanan Windows." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+ 
+                <!-- High-End Profile Card -->
+                <Border x:Name="HighCard" Style="{StaticResource GlowCardStyle}" MouseLeftButtonDown="HighCard_Click" Cursor="Hand" Margin="0,0,0,12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton x:Name="HighRadio" Grid.Column="0" IsChecked="False" VerticalAlignment="Center" Margin="0,0,12,0" Click="HighRadio_Click"/>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock x:Name="HighTitleText" Text="PC High-End (Ultimate Performance)" FontSize="14" FontWeight="Bold" Foreground="#00F2FE"/>
+                            <TextBlock x:Name="HighDescText" Text="Mengaktifkan mode daya Ultimate Performance, memprioritaskan CPU untuk game/aplikasi aktif, menonaktifkan throttling jaringan, dan mengaktifkan Windows Game Mode." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+ 
+            <!-- Advanced Tweaks Selector -->
+            <Border Grid.Column="1" Style="{StaticResource GlowCardStyle}" Margin="12,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+ 
+                    <TextBlock x:Name="ExtraTitleText" Grid.Row="0" Text="Utilitas Performa Tambahan" FontSize="15" FontWeight="Bold" Foreground="White" Margin="0,0,0,16"/>
+ 
+                    <StackPanel Grid.Row="1" VerticalAlignment="Top">
+                        <!-- Network Tweak -->
+                        <CheckBox x:Name="NetworkChk" IsChecked="True" Margin="0,8" VerticalContentAlignment="Center">
+                            <StackPanel>
+                                <TextBlock x:Name="NetTitleText" Text="Optimasi Latensi &amp; Ping Jaringan" FontWeight="SemiBold" Foreground="White"/>
+                                <TextBlock x:Name="NetDescText" Text="Menerapkan tweak TCP Delay &amp; flush DNS untuk ping stabil." FontSize="10" Foreground="#8F9CAE"/>
+                            </StackPanel>
+                        </CheckBox>
+ 
+                        <!-- SSD TRIM -->
+                        <CheckBox x:Name="TrimChk" IsChecked="True" Margin="0,8" VerticalContentAlignment="Center">
+                            <StackPanel>
+                                <TextBlock x:Name="TrimTitleText" Text="SSD TRIM (Optimasi Penyimpanan)" FontWeight="SemiBold" Foreground="White"/>
+                                <TextBlock x:Name="TrimDescText" Text="Menjalankan retrim drive SSD untuk menjaga kestabilan kecepatan." FontSize="10" Foreground="#8F9CAE"/>
+                            </StackPanel>
+                        </CheckBox>
+ 
+                        <!-- Deep Junk Clean -->
+                        <CheckBox x:Name="DeepJunkChk" IsChecked="True" Margin="0,8" VerticalContentAlignment="Center">
+                            <StackPanel>
+                                <TextBlock x:Name="JunkTitleText" Text="Pembersihan Sampah Mendalam (Deep Clean)" FontWeight="SemiBold" Foreground="White"/>
+                                <TextBlock x:Name="JunkDescText" Text="Mencakup folder Windows Temp, Prefetch, Log File, dan Recycle Bin." FontSize="10" Foreground="#8F9CAE"/>
+                            </StackPanel>
+                        </CheckBox>
+                    </StackPanel>
+ 
+                    <!-- Run button -->
+                    <ui:Button Grid.Row="2" x:Name="ApplyBoostBtn" Content="TERAPKAN PENINGKATAN PC" Style="{StaticResource ActionButtonStyle}" Click="ApplyBoostBtn_Click" HorizontalAlignment="Stretch" Height="45" Margin="0,16,0,0"/>
+                </Grid>
+            </Border>
+        </Grid>
+ 
+        <!-- Console Logging Area -->
+        <Border Grid.Row="2" Background="#0C0F19" BorderBrush="#323C52" BorderThickness="1" CornerRadius="8" Padding="12" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="LogTitleText" Grid.Row="0" Text="LOG PROSES OPTIMASI" FontSize="10" FontWeight="Bold" Foreground="#8F9CAE" Margin="0,0,0,6"/>
+                <ScrollViewer Grid.Row="1" x:Name="LogScroll" VerticalScrollBarVisibility="Auto">
+                    <TextBox x:Name="LogBox" Background="Transparent" Foreground="#00F2FE" BorderThickness="0" FontFamily="Consolas" FontSize="11" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" Text="Siap melakukan optimasi..."/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

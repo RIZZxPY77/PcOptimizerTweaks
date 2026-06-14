@@ -1,0 +1,372 @@
+<Page x:Class="PCOptimizer.Views.MouseKeyboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCOptimizer.Views"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="850"
+      Title="Mouse &amp; Keyboard Tweaks">
+
+    <Grid Background="Transparent" Margin="24,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,24">
+            <TextBlock x:Name="PageHeaderText" Text="Optimasi Mouse &amp; Keyboard" Style="{StaticResource HeaderTextPageStyle}" />
+            <TextBlock x:Name="PageSubtitleText" Text="Tweaking input respon untuk melancarkan pengetikan dan menstabilkan bidikan (aim) saat bermain game FPS." Style="{StaticResource SubtitleTextPageStyle}" />
+        </StackPanel>
+
+        <!-- Preset Optimizations (Hone-Style Cards Grid) -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <UniformGrid Columns="2" VerticalAlignment="Top">
+                
+                <!-- Mouse Acceleration Tweak Card -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="18">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Tag -->
+                        <Border Grid.Row="0" HorizontalAlignment="Left" Background="#1D2A44" CornerRadius="4" Padding="6,2" Margin="0,0,0,10">
+                            <TextBlock Text="FPS &amp; LATENCY" FontSize="9" FontWeight="Bold" Foreground="#00F2FE"/>
+                        </Border>
+
+                        <!-- Title -->
+                        <TextBlock Grid.Row="1" x:Name="Card1Title" Text="Mouse Aim Stabilizer (MarkC Mouse Fix)" FontSize="14" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,6"/>
+
+                        <!-- Description -->
+                        <TextBlock Grid.Row="2" x:Name="Card1Desc" Text="Menghilangkan fitur akselerasi mouse bawaan Windows dan menerapkan kurva linier 1-to-1 (MarkC Fix). Berguna agar gerakan mouse Anda konsisten dan presisi dalam game penembak (FPS)." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="14" Margin="0,0,0,16"/>
+
+                        <!-- Footer Actions -->
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                <ui:SymbolIcon Symbol="Add24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Bookmark24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Info24" FontSize="14" Foreground="#8F9CAE" Cursor="Hand"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock x:Name="Card1ActivateText" Text="Aktifkan" FontSize="11" Foreground="#8F9CAE" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                <ui:ToggleSwitch x:Name="MouseTweakToggle" IsChecked="False" Checked="MouseTweakToggle_Checked" Unchecked="MouseTweakToggle_Unchecked" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <!-- Keyboard Latency Tweak Card -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="18">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Tag -->
+                        <Border Grid.Row="0" HorizontalAlignment="Left" Background="#1D2A44" CornerRadius="4" Padding="6,2" Margin="0,0,0,10">
+                            <TextBlock Text="RESPON INPUT" FontSize="9" FontWeight="Bold" Foreground="#00F2FE"/>
+                        </Border>
+
+                        <!-- Title -->
+                        <TextBlock Grid.Row="1" x:Name="Card2Title" Text="Keyboard Input Latency Reducer" FontSize="14" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,6"/>
+
+                        <!-- Description -->
+                        <TextBlock Grid.Row="2" x:Name="Card2Desc" Text="Menyetel Keyboard Delay ke 0 dan Keyboard Speed ke 31 pada registry. Meminimalkan waktu respon delay saat tombol keyboard ditekan, mempercepat pengetikan berulang." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="14" Margin="0,0,0,16"/>
+
+                        <!-- Footer Actions -->
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                <ui:SymbolIcon Symbol="Add24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Bookmark24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Info24" FontSize="14" Foreground="#8F9CAE" Cursor="Hand"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock x:Name="Card2ActivateText" Text="Aktifkan" FontSize="11" Foreground="#8F9CAE" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                <ui:ToggleSwitch x:Name="KeyboardTweakToggle" IsChecked="False" Checked="KeyboardTweakToggle_Checked" Unchecked="KeyboardTweakToggle_Unchecked" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <!-- USB Power Suspended Card -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="18">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Tag -->
+                        <Border Grid.Row="0" HorizontalAlignment="Left" Background="#2C2315" CornerRadius="4" Padding="6,2" Margin="0,0,0,10">
+                            <TextBlock Text="HARDWARE POWER" FontSize="9" FontWeight="Bold" Foreground="#E5A93C"/>
+                        </Border>
+
+                        <!-- Title -->
+                        <TextBlock Grid.Row="1" x:Name="Card3Title" Text="Matikan USB Selective Suspend" FontSize="14" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,6"/>
+
+                        <!-- Description -->
+                        <TextBlock Grid.Row="2" x:Name="Card3Desc" Text="Menonaktifkan fitur penghemat daya USB Windows. Mencegah periferal (mouse &amp; keyboard) tiba-tiba terputus, menganggur, or mengalami penurunan daya saat tidak digerakkan." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="14" Margin="0,0,0,16"/>
+
+                        <!-- Footer Actions -->
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                <ui:SymbolIcon Symbol="Add24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Bookmark24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Info24" FontSize="14" Foreground="#8F9CAE" Cursor="Hand"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock x:Name="Card3ActivateText" Text="Aktifkan" FontSize="11" Foreground="#8F9CAE" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                <ui:ToggleSwitch x:Name="UsbSuspendToggle" IsChecked="False" Checked="UsbSuspendToggle_Checked" Unchecked="UsbSuspendToggle_Unchecked" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <!-- High Polling Rate Priority Card -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="18">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Tag -->
+                        <Border Grid.Row="0" HorizontalAlignment="Left" Background="#231A2D" CornerRadius="4" Padding="6,2" Margin="0,0,0,10">
+                            <TextBlock Text="GAMING OPTIMIZATION" FontSize="9" FontWeight="Bold" Foreground="#8A2387"/>
+                        </Border>
+
+                        <!-- Title -->
+                        <TextBlock Grid.Row="1" x:Name="Card4Title" Text="Prioritas Polling USB Kustom" FontSize="14" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,6"/>
+
+                        <!-- Description -->
+                        <TextBlock Grid.Row="2" x:Name="Card4Desc" Text="Mengonfigurasi prioritas penanganan interupsi USB mouse pada CPU ke tingkat yang lebih responsif. Membantu menstabilkan mouse dengan polling rate tinggi (1000Hz ke atas)." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="14" Margin="0,0,0,16"/>
+
+                        <!-- Footer Actions -->
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                <ui:SymbolIcon Symbol="Add24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Bookmark24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand"/>
+                                <ui:SymbolIcon Symbol="Info24" FontSize="14" Foreground="#8F9CAE" Cursor="Hand"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock x:Name="Card4ActivateText" Text="Aktifkan" FontSize="11" Foreground="#8F9CAE" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                <ui:ToggleSwitch x:Name="PollingPriorityToggle" IsChecked="False" Checked="PollingPriorityToggle_Checked" Unchecked="PollingPriorityToggle_Unchecked" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <!-- Card 5: Mouse Sensitivity & Pointer Speed -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="18">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+ 
+                        <!-- Tag -->
+                        <Border Grid.Row="0" HorizontalAlignment="Left" Background="#1A2D23" CornerRadius="4" Padding="6,2" Margin="0,0,0,10">
+                            <TextBlock Text="TUNING &amp; SENSITIVITY" FontSize="9" FontWeight="Bold" Foreground="#00FF87"/>
+                        </Border>
+ 
+                        <!-- Title -->
+                        <TextBlock Grid.Row="1" x:Name="Card5Title" Text="Sensitivitas &amp; Kecepatan Pointer" FontSize="14" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,6"/>
+ 
+                        <!-- Controls Area -->
+                        <StackPanel Grid.Row="2" Margin="0,0,0,12" VerticalAlignment="Top">
+                            <!-- Pointer Speed Slider -->
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" x:Name="PointerSpeedLabelText" Text="Kecepatan Pointer Windows" FontSize="11" Foreground="#8F9CAE" VerticalAlignment="Center"/>
+                                <TextBlock Grid.Column="1" x:Name="PointerSpeedValueText" Text="10" FontSize="11" FontWeight="Bold" Foreground="#00F2FE" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Slider x:Name="PointerSpeedSlider" Minimum="1" Maximum="20" Value="10" TickFrequency="1" IsSnapToTickEnabled="True" Margin="0,0,0,12" ValueChanged="PointerSpeedSlider_ValueChanged" />
+ 
+                            <!-- Sensitivity X Slider -->
+                            <Grid Margin="0,0,0,6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" x:Name="SensiXLabelText" Text="Sensitivitas Sumbu X (Horizontal)" FontSize="11" Foreground="#8F9CAE" VerticalAlignment="Center"/>
+                                <TextBlock Grid.Column="1" x:Name="SensiXValueText" Text="1.00x" FontSize="11" FontWeight="Bold" Foreground="#FF9100" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Slider x:Name="SensiXSlider" Minimum="0.1" Maximum="4.0" Value="1.0" TickFrequency="0.05" IsSnapToTickEnabled="True" Margin="0,0,0,12" ValueChanged="SensiXSlider_ValueChanged" />
+ 
+                            <!-- Sensitivity Y Slider -->
+                            <Grid Margin="0,0,0,6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" x:Name="SensiYLabelText" Text="Sensitivitas Sumbu Y (Vertikal)" FontSize="11" Foreground="#8F9CAE" VerticalAlignment="Center"/>
+                                <TextBlock Grid.Column="1" x:Name="SensiYValueText" Text="1.00x" FontSize="11" FontWeight="Bold" Foreground="#FF9100" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Slider x:Name="SensiYSlider" Minimum="0.1" Maximum="4.0" Value="1.0" TickFrequency="0.05" IsSnapToTickEnabled="True" Margin="0,0,0,6" ValueChanged="SensiYSlider_ValueChanged" />
+                        </StackPanel>
+ 
+                        <!-- Footer Actions -->
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                                <ui:SymbolIcon Symbol="Info24" FontSize="14" Foreground="#8F9CAE" Cursor="Hand" ToolTip="Menyetel kecepatan kursor Windows (MouseSensitivity) secara real-time."/>
+                            </StackPanel>
+                            <Button Grid.Column="1" x:Name="ApplySensitivityBtn" Content="Terapkan Sensi" Style="{StaticResource ActionButtonStyle}" Padding="10,4" Height="28" FontSize="11" Click="ApplySensitivity_Click"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+ 
+                <!-- Card 6: Mouse DPI & Hz (Hardware Configuration) -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="18">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+ 
+                        <!-- Tag -->
+                        <Border Grid.Row="0" HorizontalAlignment="Left" Background="#2B1A1E" CornerRadius="4" Padding="6,2" Margin="0,0,0,10">
+                            <TextBlock Text="HARDWARE CONFIGURATION" FontSize="9" FontWeight="Bold" Foreground="#FF2E93"/>
+                        </Border>
+ 
+                        <!-- Title -->
+                        <TextBlock Grid.Row="1" x:Name="Card6Title" Text="DPI &amp; Polling Rate Mouse" FontSize="14" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,6"/>
+ 
+                        <!-- Controls Area -->
+                        <StackPanel Grid.Row="2" Margin="0,0,0,12" VerticalAlignment="Top">
+                            <!-- DPI Dropdown -->
+                            <TextBlock x:Name="DpiLabelText" Text="Pilih DPI Mouse Anda" FontSize="11" Foreground="#8F9CAE" Margin="0,0,0,6"/>
+                            <ComboBox x:Name="DpiComboBox" SelectedIndex="1" Height="32" Background="#111625" Foreground="White" BorderBrush="#323C52" Padding="8,4" Margin="0,0,0,14">
+                                <ComboBoxItem Content="400 DPI"/>
+                                <ComboBoxItem Content="800 DPI (Rekomendasi)"/>
+                                <ComboBoxItem Content="1200 DPI"/>
+                                <ComboBoxItem Content="1600 DPI"/>
+                                <ComboBoxItem Content="3200 DPI"/>
+                                <ComboBoxItem Content="6400 DPI"/>
+                            </ComboBox>
+ 
+                            <!-- Polling Rate Dropdown -->
+                            <TextBlock x:Name="HzLabelText" Text="Pilih Polling Rate Mouse" FontSize="11" Foreground="#8F9CAE" Margin="0,0,0,6"/>
+                            <ComboBox x:Name="HzComboBox" SelectedIndex="3" Height="32" Background="#111625" Foreground="White" BorderBrush="#323C52" Padding="8,4" Margin="0,0,0,14">
+                                <ComboBoxItem Content="125 Hz (Low Latency Office)"/>
+                                <ComboBoxItem Content="250 Hz"/>
+                                <ComboBoxItem Content="500 Hz (Konsisten)"/>
+                                <ComboBoxItem Content="1000 Hz (Rekomendasi Gaming)"/>
+                                <ComboBoxItem Content="2000 Hz"/>
+                                <ComboBoxItem Content="4000 Hz"/>
+                                <ComboBoxItem Content="8000 Hz (Ultra High-End)"/>
+                            </ComboBox>
+ 
+                            <TextBlock x:Name="HardwareFooterText" Text="*Pengaturan ini melaraskan presisi registry Windows agar sesuai dengan perangkat fisik Anda." FontSize="9" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                        </StackPanel>
+ 
+                        <!-- Footer Actions -->
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                                <ui:SymbolIcon Symbol="Info24" FontSize="14" Foreground="#8F9CAE" Cursor="Hand" ToolTip="Menyelaraskan performa polling USB CPU."/>
+                            </StackPanel>
+                            <Button Grid.Column="1" x:Name="ApplyHardwareBtn" Content="TERAPKAN HARDWARE CONFIG" Style="{StaticResource ActionButtonStyle}" Padding="10,4" Height="28" FontSize="11" Click="ApplyHardware_Click"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+ 
+                <!-- Card 7: Config Profile Manager -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="8" Padding="18">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+ 
+                        <!-- Tag -->
+                        <Border Grid.Row="0" HorizontalAlignment="Left" Background="#1D2A44" CornerRadius="4" Padding="6,2" Margin="0,0,0,10">
+                            <TextBlock Text="CONFIG PROFILE MANAGER" FontSize="9" FontWeight="Bold" Foreground="#00F2FE"/>
+                        </Border>
+ 
+                        <!-- Title -->
+                        <TextBlock Grid.Row="1" x:Name="Card7Title" Text="Profil &amp; Cadangan Konfigurasi" FontSize="14" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,6"/>
+ 
+                        <!-- Controls Area -->
+                        <StackPanel Grid.Row="2" Margin="0,0,0,12" VerticalAlignment="Top">
+                            <TextBlock x:Name="Card7DescText" Text="Ekspor semua pengaturan optimasi mouse, keyboard, dan parameter DPI/Hz Anda ke file JSON, atau muat kembali pengaturan Anda." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="14" Margin="0,0,0,12"/>
+                            
+                            <!-- Auto Save Info/Toggle -->
+                            <Grid Margin="0,0,0,8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock x:Name="AutoSaveLabelText" Text="Simpan Otomatis (Auto-Save)" FontSize="11" FontWeight="SemiBold" Foreground="White"/>
+                                    <TextBlock x:Name="AutoSaveSubLabelText" Text="Menyimpan perubahan secara otomatis ke registry" FontSize="9.5" Foreground="#8F9CAE"/>
+                                </StackPanel>
+                                <ui:ToggleSwitch Grid.Column="1" x:Name="AutoSaveToggle" IsChecked="True" Checked="AutoSaveToggle_Checked" Unchecked="AutoSaveToggle_Unchecked" VerticalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+ 
+                        <!-- Footer Actions -->
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                                <ui:SymbolIcon Symbol="Save24" FontSize="14" Foreground="#8F9CAE" Margin="0,0,12,0" Cursor="Hand" ToolTip="Menyimpan profil konfigurasi."/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                <Button x:Name="ExportConfigBtn" Content="Ekspor Config" Style="{StaticResource OutlineButtonStyle}" Padding="10,4" Height="28" FontSize="11" Margin="0,0,8,0" Click="ExportConfig_Click"/>
+                                <Button x:Name="ImportConfigBtn" Content="Impor Config" Style="{StaticResource ActionButtonStyle}" Padding="10,4" Height="28" FontSize="11" Click="ImportConfig_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+            </UniformGrid>
+        </ScrollViewer>
+    </Grid>
+</Page>

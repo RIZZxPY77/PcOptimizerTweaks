@@ -1,0 +1,352 @@
+<Page x:Class="PCOptimizer.Views.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCOptimizer.Views"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="950"
+      Title="Dashboard"
+      SizeChanged="Page_SizeChanged">
+
+    <Grid Margin="24,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top Header Row -->
+        <Grid Grid.Row="0" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0">
+                <TextBlock x:Name="PageTitleText" Text="CLAYX-TEAM OPTIMIZE" FontSize="26" FontWeight="Bold" Foreground="White" />
+                <TextBlock x:Name="PageSubtitleText" Text="Boost-Ups — Jaga performa PC Anda di tingkat puncak dengan pemeliharaan esensial dan tuning performa." FontSize="12" Foreground="#8F9CAE" Margin="0,4,0,0" />
+            </StackPanel>
+
+            <!-- Bulk Button -->
+            <ui:Button Grid.Column="1" x:Name="BulkBtn" Content="⚡ QUICK BOOST" Style="{StaticResource ActionButtonStyle}" Click="BulkBtn_Click" VerticalAlignment="Center" Padding="20,10" Height="40"/>
+        </Grid>
+
+        <!-- Live System Monitors Row -->
+        <Grid Grid.Row="1" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- CPU Monitor Card -->
+            <Border Grid.Column="0" Margin="0,0,8,0" Style="{StaticResource GlowCardStyle}" Padding="12,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Width="30" Height="30" CornerRadius="15" Background="#1D2A44" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="DeveloperBoard24" Filled="True" FontSize="14" Foreground="#00F2FE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center">
+                        <TextBlock x:Name="CpuMonitorLabel" Text="CPU LOAD" FontSize="8.5" FontWeight="Bold" Foreground="#8F9CAE"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                            <TextBlock x:Name="CpuUsageTxt" Text="0 %" FontSize="14" FontWeight="Bold" Foreground="White" Width="42"/>
+                            <ProgressBar x:Name="CpuProgressBar" Value="0" Minimum="0" Maximum="100" Height="4" Width="90" Foreground="#00F2FE" Background="#1E293B" VerticalAlignment="Center" Margin="8,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- RAM Monitor Card -->
+            <Border Grid.Column="1" Margin="8,0,8,0" Style="{StaticResource GlowCardStyle}" Padding="12,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Width="30" Height="30" CornerRadius="15" Background="#261E33" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="DataHistogram24" Filled="True" FontSize="14" Foreground="#9C27B0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center">
+                        <TextBlock x:Name="RamMonitorLabel" Text="RAM UTILITY" FontSize="8.5" FontWeight="Bold" Foreground="#8F9CAE"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                            <TextBlock x:Name="RamUsageTxt" Text="0.0 GB" FontSize="13" FontWeight="Bold" Foreground="White" Width="95" VerticalAlignment="Center"/>
+                            <ProgressBar x:Name="RamProgressBar" Value="0" Minimum="0" Maximum="100" Height="4" Width="55" Foreground="#9C27B0" Background="#1E293B" VerticalAlignment="Center" Margin="8,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Space Cleaned Monitor Card -->
+            <Border Grid.Column="2" Margin="8,0,0,0" Style="{StaticResource GlowCardStyle}" Padding="12,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Width="30" Height="30" CornerRadius="15" Background="#122A1E" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="Delete24" Filled="True" FontSize="14" Foreground="#00E676" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center">
+                        <TextBlock x:Name="ReclaimedLabel" Text="TOTAL RECLAIMED" FontSize="8.5" FontWeight="Bold" Foreground="#8F9CAE"/>
+                        <TextBlock x:Name="CleanedSpaceTxt" Text="1.42 GB" FontSize="14" FontWeight="Bold" Foreground="#00E676" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Tabs and Search Bar -->
+        <Grid Grid.Row="2" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="220"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Category Tabs -->
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <RadioButton x:Name="TabRecommended" Content="Rekomendasi" IsChecked="True" Style="{StaticResource CategoryTabStyle}" Click="Filter_Click" Tag="Recommended"/>
+                <RadioButton x:Name="TabSystem" Content="Sistem" Style="{StaticResource CategoryTabStyle}" Click="Filter_Click" Tag="System"/>
+                <RadioButton x:Name="TabGaming" Content="Gaming" Style="{StaticResource CategoryTabStyle}" Click="Filter_Click" Tag="Gaming"/>
+                <RadioButton x:Name="TabHardware" Content="Hardware" Style="{StaticResource CategoryTabStyle}" Click="Filter_Click" Tag="Hardware"/>
+            </StackPanel>
+
+            <!-- Search Bar -->
+            <ui:TextBox Grid.Column="1" x:Name="SearchBox" PlaceholderText="Cari Boost-Ups..." Icon="Search24" TextChanged="SearchBox_TextChanged" Height="32"/>
+        </Grid>
+
+        <!-- Main Content Area (Lists & Right Details Pane) -->
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Panel: Lists of Tweaks -->
+            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" Margin="0,0,12,12">
+                <StackPanel>
+                    <!-- Recommended For You Section -->
+                    <StackPanel x:Name="RecSection" Margin="0,0,0,24">
+                        <Grid Margin="0,0,0,12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="RecHeaderTitle" Grid.Column="0" Text="Direkomendasikan Untuk Anda" FontSize="15" FontWeight="Bold" Foreground="White" />
+                            <TextBlock x:Name="SeeAllBtn1" Grid.Column="1" Text="Lihat Semua >" FontSize="11" Foreground="#FF9100" Cursor="Hand"/>
+                        </Grid>
+
+                        <ItemsControl x:Name="RecommendedItemsCtrl">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="{Binding GridColumns, RelativeSource={RelativeSource AncestorType=Page}}" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Height="130" Style="{StaticResource GlowCardStyle}" MouseLeftButtonDown="TweakCard_Click" Cursor="Hand" Tag="{Binding Id}" Margin="0,0,12,12" HorizontalAlignment="Stretch">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            
+                                            <!-- Title & Icon & Estimate Badge -->
+                                            <Grid Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="0" Width="22" Height="22" CornerRadius="11" Background="#1D2E47">
+                                                    <ui:SymbolIcon Symbol="{Binding Icon}" Filled="True" FontSize="11" Foreground="#FF9100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <TextBlock Grid.Column="1" Text="{Binding Name}" FontWeight="Bold" FontSize="11.5" Foreground="White" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="8,0,4,0"/>
+                                                
+                                                <!-- Performance Estimate -->
+                                                <Border Grid.Column="2" Background="#102A45" BorderBrush="#00F2FE" BorderThickness="1" CornerRadius="4" Padding="6,2" VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding PerformanceEstimate}" FontSize="8.5" FontWeight="Bold" Foreground="#00F2FE" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Grid>
+
+                                            <!-- Description snippet -->
+                                            <TextBlock Grid.Row="1" Text="{Binding Description}" FontSize="9.5" Foreground="#8F9CAE" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" Margin="0,6,0,0" LineHeight="12.5" MaxHeight="38"/>
+
+                                            <!-- Card footer (Size & Run) -->
+                                            <Grid Grid.Row="2" Margin="0,4,0,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Text="{Binding Status}" FontSize="9.5" Foreground="#8F9CAE" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                                <Border Grid.Column="1" Style="{StaticResource RunCardButtonStyle}" MouseLeftButtonDown="RunCard_Click" Tag="{Binding Id}">
+                                                    <TextBlock Text="RUN" FontSize="9" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+
+                    <!-- System Section -->
+                    <StackPanel x:Name="SysSection">
+                        <Grid Margin="0,0,0,12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="SysHeaderTitle" Grid.Column="0" Text="Utilitas &amp; Pembersihan Sistem" FontSize="15" FontWeight="Bold" Foreground="White" />
+                            <TextBlock x:Name="SeeAllBtn2" Grid.Column="1" Text="Lihat Semua >" FontSize="11" Foreground="#FF9100" Cursor="Hand"/>
+                        </Grid>
+
+                        <ItemsControl x:Name="SystemItemsCtrl">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid Columns="{Binding GridColumns, RelativeSource={RelativeSource AncestorType=Page}}" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Height="130" Style="{StaticResource GlowCardStyle}" MouseLeftButtonDown="TweakCard_Click" Cursor="Hand" Tag="{Binding Id}" Margin="0,0,12,12" HorizontalAlignment="Stretch">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            
+                                            <!-- Title & Icon & Estimate Badge -->
+                                            <Grid Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Border Grid.Column="0" Width="22" Height="22" CornerRadius="11" Background="#1D2E47">
+                                                    <ui:SymbolIcon Symbol="{Binding Icon}" Filled="True" FontSize="11" Foreground="#00F2FE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <TextBlock Grid.Column="1" Text="{Binding Name}" FontWeight="Bold" FontSize="11.5" Foreground="White" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="8,0,4,0"/>
+                                                
+                                                <!-- Performance Estimate -->
+                                                <Border Grid.Column="2" Background="#102A45" BorderBrush="#00F2FE" BorderThickness="1" CornerRadius="4" Padding="6,2" VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding PerformanceEstimate}" FontSize="8.5" FontWeight="Bold" Foreground="#00F2FE" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Grid>
+
+                                            <!-- Description snippet -->
+                                            <TextBlock Grid.Row="1" Text="{Binding Description}" FontSize="9.5" Foreground="#8F9CAE" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" Margin="0,6,0,0" LineHeight="12.5" MaxHeight="38"/>
+
+                                            <!-- Card footer (Size & Run) -->
+                                            <Grid Grid.Row="2" Margin="0,4,0,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Text="{Binding Status}" FontSize="9.5" Foreground="#8F9CAE" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                                <Border Grid.Column="1" Style="{StaticResource RunCardButtonStyle}" MouseLeftButtonDown="RunCard_Click" Tag="{Binding Id}">
+                                                    <TextBlock Text="RUN" FontSize="9" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </Grid>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Right Panel: Selection Details (Hone-Style Side Panel) -->
+            <Border Grid.Column="1" Margin="12,0,0,12" Background="#111625" BorderBrush="#1B2238" BorderThickness="1" CornerRadius="8" Padding="24" VerticalAlignment="Stretch">
+                <Grid x:Name="DetailsGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Header (Icon & Title) -->
+                    <Grid Grid.Row="0" Margin="0,0,0,16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Width="32" Height="32" CornerRadius="6" Background="#1D2E47">
+                            <ui:SymbolIcon x:Name="DetailIcon" Symbol="Delete24" Filled="True" FontSize="18" Foreground="#FF9100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock Grid.Column="1" x:Name="DetailTitle" Text="Junk Cleaner" FontSize="18" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </Grid>
+ 
+                    <!-- Description -->
+                    <TextBlock Grid.Row="1" x:Name="DetailDesc" Text="Runs the Junk Cleaner tool, which scans the system for unnecessary files and removes them. It helps reclaim disk space and reduces system clutter." FontSize="11.5" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="16" Margin="0,0,0,20"/>
+ 
+                    <!-- Options/Settings choices (dynamic visibility) -->
+                    <Grid Grid.Row="2">
+                        <!-- Cleanup Choices -->
+                        <StackPanel x:Name="CleanupOptionsPanel" Visibility="Visible">
+                            <TextBlock x:Name="CleanupTitleLabel" Text="Pilih Tipe Pembersihan" FontSize="12" FontWeight="Bold" Foreground="White" Margin="0,0,0,8"/>
+                            
+                            <RadioButton x:Name="SimpleCleanupRadio" IsChecked="True" Content="Sederhana (Aman)" Foreground="White" Margin="0,4"/>
+                            <TextBlock x:Name="SimpleRadioLabel" Text="Menghapus daftar file temporary standar yang aman dibersihkan saat Windows aktif." FontSize="10" Foreground="#8F9CAE" Margin="22,0,0,12" TextWrapping="Wrap"/>
+                            
+                            <RadioButton x:Name="AdvancedCleanupRadio" Content="Mendalam (Direkomendasikan)" Foreground="White" Margin="0,4"/>
+                            <TextBlock x:Name="AdvancedRadioLabel" Text="Melakukan pembersihan folder Prefetch and Logs sistem. Memerlukan hak administrator penuh." FontSize="10" Foreground="#8F9CAE" Margin="22,0,0,12" TextWrapping="Wrap"/>
+                        </StackPanel>
+ 
+                        <!-- DNS Selector Panel -->
+                        <StackPanel x:Name="DnsOptionsPanel" Visibility="Collapsed">
+                            <TextBlock x:Name="CleanupTypeLabel" Text="Pilih Server DNS" FontSize="12" FontWeight="Bold" Foreground="White" Margin="0,0,0,8"/>
+                            <ComboBox x:Name="DnsComboBox" SelectedIndex="0" Height="32" Background="#111625" Foreground="White" BorderBrush="#323C52" Padding="8,4">
+                                <ComboBoxItem Content="Cloudflare DNS (1.1.1.1) — Cepat &amp; Privat"/>
+                                <ComboBoxItem Content="Google DNS (8.8.8.8) — Stabil &amp; Global"/>
+                                <ComboBoxItem Content="Quad9 DNS (9.9.9.9) — Aman &amp; Anti-Malware"/>
+                                <ComboBoxItem Content="Default Windows (DHCP) — Kembalikan Semula"/>
+                            </ComboBox>
+                            <TextBlock x:Name="DnsServerLabel" Text="Server DNS kustom mempercepat pencarian nama host server game serta menstabilkan rute koneksi ping Anda." FontSize="10" Foreground="#8F9CAE" Margin="4,8,0,0" TextWrapping="Wrap"/>
+                        </StackPanel>
+ 
+                        <!-- Static Changes Description (Visible when no options panel active) -->
+                        <StackPanel x:Name="GeneralChangesPanel" Visibility="Collapsed">
+                            <Border Background="#1C2E47" BorderBrush="#00F2FE" BorderThickness="1,0,0,0" Padding="12,8" CornerRadius="0,4,4,0">
+                                <StackPanel>
+                                    <TextBlock x:Name="WhatWillBeProcessedTitle" Text="Apa yang akan diproses?" FontSize="10" FontWeight="Bold" Foreground="#00F2FE" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="DetailChangesTxt" Text="File cache pengguna, log crash aplikasi, folder system temporary, prefetch, dan riwayat recycle bin." FontSize="9.5" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="13"/>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Run Button and Progress Overlay area -->
+                    <Grid Grid.Row="3" Margin="0,16,0,0">
+                        <ui:Button x:Name="RunTweakBtn" Content="Jalankan Pembersihan" Style="{StaticResource ActionButtonStyle}" Click="RunTweakBtn_Click" HorizontalAlignment="Stretch" Height="42"/>
+                        
+                        <!-- Progress Ring Animation overlay -->
+                        <Grid x:Name="ProgressGrid" Visibility="Collapsed" Background="#111625" Height="42">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ui:ProgressRing x:Name="TweakProgressRing" IsIndeterminate="False" Progress="0" Width="26" Height="26" Foreground="#FF9100" VerticalAlignment="Center" Margin="6,0,0,0"/>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="12,0,0,0">
+                                <TextBlock x:Name="ProgressStatusTxt" Text="Memindai file sistem..." FontSize="10.5" FontWeight="Bold" Foreground="White"/>
+                                <TextBlock x:Name="ProgressPercentTxt" Text="0%" FontSize="9.5" Foreground="#8F9CAE"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+
+                    <!-- Schedule button -->
+                    <ui:Button Grid.Row="4" x:Name="ScheduleBtn" Content="Jadwalkan Nanti" Style="{StaticResource OutlineButtonStyle}" Click="ScheduleBtn_Click" HorizontalAlignment="Stretch" Height="38" Margin="0,8,0,0"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,154 @@
+<Page x:Class="PCOptimizer.Views.DriversPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCOptimizer.Views"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="850"
+      Title="Drivers Manager">
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Pendeteksi Driver Hardware" Style="{StaticResource HeaderTextPageStyle}" />
+            <TextBlock Text="Mendeteksi versi driver hardware utama Anda dan mengidentifikasi driver yang memerlukan pembaruan." Style="{StaticResource SubtitleTextPageStyle}" />
+            <StackPanel Orientation="Vertical" Margin="0,8,0,0">
+                <TextBlock Text="Detects your main hardware driver versions and identifies drivers needing updates." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+                <TextBlock Text="يكتشف إصدارات برنامج تشغيل الأجهزة الرئيسية الخاصة بك ويحدد برامج التشغيل التي تحتاج إلى تحديث." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+                <TextBlock Text="主要ハードウェアドライバーのバージョンを検出し、更新が必要なドライバーを特定します。" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+                <TextBlock Text="检测您的主要硬件驱动程序版本并识别需要更新的驱动程序。" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+                <TextBlock Text="ตรวจจับเวอร์ชันไดรเวอร์ฮาร์ดแวร์หลักของคุณและระบุไดรเวอร์ที่ต้องอัปเดต" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+                <TextBlock Text="Erkennt die Versionen Ihrer wichtigsten Treiber und identifiziert zu aktualisierende Treiber." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+                <TextBlock Text="Detecta as versões dos drivers de hardware principais e identifica drivers que precisam ser atualizados." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+                <TextBlock Text="Detecta las versiones de los controladores de hardware principales y identifica controladores que necesitan actualización." FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Main Content -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Drivers List -->
+            <Grid Grid.Column="0" Margin="0,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ListView Grid.Row="0" x:Name="DriversListView" Background="Transparent" BorderThickness="0" Margin="0,0,0,12" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Margin" Value="0,4"/>
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            <Style.Resources>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent"/>
+                            </Style.Resources>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource GlowCardStyle}" Margin="2" Padding="12">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Class Icon -->
+                                    <Border Grid.Column="0" Width="30" Height="30" CornerRadius="6" Background="#1D2E47" HorizontalAlignment="Left">
+                                        <ui:SymbolIcon Symbol="Settings24" Filled="True" FontSize="18" Foreground="#00F2FE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+
+                                    <!-- Info -->
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="8,0,0,0">
+                                        <TextBlock Text="{Binding Name}" FontSize="13" FontWeight="Bold" Foreground="White" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Manufacturer, StringFormat='Produsen: {0}'}" FontSize="10" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Version, StringFormat='Versi: {0}'}" FontSize="9" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding DriverDate, StringFormat='Tanggal Driver: {0}'}" FontSize="9" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                                    </StackPanel>
+
+                                    <!-- Status Badge -->
+                                    <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="130">
+                                        <Border CornerRadius="4" Padding="8,4" Background="#1D2E47" BorderBrush="{Binding StatusColor}" BorderThickness="1" HorizontalAlignment="Right" Margin="0,0,0,4">
+                                            <TextBlock Text="{Binding StatusText}" FontSize="9" FontWeight="SemiBold" Foreground="{Binding StatusColor}"/>
+                                        </Border>
+                                        <TextBlock Text="{Binding DeviceClass}" FontSize="9" Foreground="#8F9CAE" HorizontalAlignment="Right"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <ui:Button Grid.Row="1" x:Name="ScanDriversBtn" Content="PINDAI ULANG DRIVER HARDWARE" Style="{StaticResource ActionButtonStyle}" Click="ScanDriversBtn_Click" HorizontalAlignment="Stretch" Height="40"/>
+            </Grid>
+
+            <!-- Guide and Download Links -->
+            <Border Grid.Column="1" Style="{StaticResource GlowCardStyle}" Margin="12,0,0,0" VerticalAlignment="Top">
+                <StackPanel>
+                    <TextBlock Text="Pusat Pembaruan Driver" FontSize="15" FontWeight="Bold" Foreground="White" Margin="0,0,0,12"/>
+                    <TextBlock Text="Selalu gunakan driver resmi dari produsen hardware Anda untuk performa visual dan gaming maksimal." FontSize="11" Foreground="#8F9CAE" Margin="0,0,0,16" TextWrapping="Wrap"/>
+
+                    <!-- Nvidia Link -->
+                    <Border BorderThickness="1" BorderBrush="#323C52" CornerRadius="6" Padding="12" Margin="0,0,0,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="NVIDIA Drivers" FontWeight="Bold" Foreground="#76B900" FontSize="12"/>
+                                <TextBlock Text="GeForce Experience &amp; Game Ready Drivers." FontSize="9" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                            </StackPanel>
+                            <ui:Button Grid.Column="1" Content="Buka" Click="OpenNvidiaLink_Click" Style="{StaticResource OutlineButtonStyle}" Width="60" Height="30" Padding="0" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- AMD Link -->
+                    <Border BorderThickness="1" BorderBrush="#323C52" CornerRadius="6" Padding="12" Margin="0,0,0,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="AMD Radeon Drivers" FontWeight="Bold" Foreground="#ED1C24" FontSize="12"/>
+                                <TextBlock Text="Radeon Software Adrenalin Edition." FontSize="9" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                            </StackPanel>
+                            <ui:Button Grid.Column="1" Content="Buka" Click="OpenAmdLink_Click" Style="{StaticResource OutlineButtonStyle}" Width="60" Height="30" Padding="0" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Intel Link -->
+                    <Border BorderThickness="1" BorderBrush="#323C52" CornerRadius="6" Padding="12" Margin="0,0,0,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="Intel Drivers" FontWeight="Bold" Foreground="#0071C5" FontSize="12"/>
+                                <TextBlock Text="Intel Driver &amp; Support Assistant (DSA)." FontSize="9" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                            </StackPanel>
+                            <ui:Button Grid.Column="1" Content="Buka" Click="OpenIntelLink_Click" Style="{StaticResource OutlineButtonStyle}" Width="60" Height="30" Padding="0" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

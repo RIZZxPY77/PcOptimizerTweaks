@@ -1,0 +1,148 @@
+<Page x:Class="PCOptimizer.Views.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="ProfilePage"
+      Background="#0A0D14">
+
+    <Grid Margin="24,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock x:Name="PageTitleText" Text="Profil Pengguna" Style="{StaticResource HeaderTextPageStyle}" />
+            <TextBlock x:Name="PageSubtitleText" Text="Informasi lisensi aplikasi, detail perangkat keras, dan status akun publik Anda." Style="{StaticResource SubtitleTextPageStyle}" />
+        </StackPanel>
+
+        <!-- Content Area -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Panel: Avatar & Member Tier -->
+            <Border Grid.Column="0" Margin="0,0,16,12" Style="{StaticResource GlowCardStyle}" Padding="20">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                    <!-- Glowing Avatar Circle -->
+                    <Grid Width="110" Height="110" Margin="0,10,0,16">
+                        <Ellipse Stroke="{StaticResource HoneOrangeBrush}" StrokeThickness="2" Fill="#121625"/>
+                        <Border Width="92" Height="92" CornerRadius="46" Background="#1B2233" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ui:SymbolIcon Symbol="Person24" Filled="True" FontSize="44" Foreground="#FF9100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <!-- Active Status Dot -->
+                        <Border Width="20" Height="20" CornerRadius="10" Background="#122A1E" BorderBrush="#00E676" BorderThickness="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,8,8">
+                            <Ellipse Width="8" Height="8" Fill="#00E676" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+
+                    <!-- User Key / Name -->
+                    <TextBlock x:Name="LicenseKeyHeaderTxt" Text="CLAYX MEMBER" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" TextAlignment="Center" Margin="0,0,0,4"/>
+                    
+                    <!-- Member Badge -->
+                    <Border Background="#2A1E12" BorderBrush="#FF9100" BorderThickness="1" CornerRadius="12" Padding="12,4" HorizontalAlignment="Center" Margin="0,0,0,24">
+                        <TextBlock x:Name="ActiveLicenseBadgeTxt" Text="LISENSI AKTIF (VIP PREMIUM)" FontSize="10" FontWeight="Bold" Foreground="White"/>
+                    </Border>
+
+                    <Separator Background="#1F2840" Height="1" Margin="0,0,0,20"/>
+
+                    <!-- Summary Stats -->
+                    <Grid Margin="0,0,0,10">
+                        <TextBlock x:Name="AccountTypeLabel" Text="Tipe Akun" FontSize="11" Foreground="#8F9CAE" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="AccountTypeValue" Text="Akses VIP Premium" FontSize="11.5" FontWeight="SemiBold" Foreground="#FF9100" HorizontalAlignment="Right"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,10">
+                        <TextBlock x:Name="ServerStatusLabel" Text="Status Server" FontSize="11" Foreground="#8F9CAE" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="ServerStatusValue" Text="Terhubung" FontSize="11.5" FontWeight="SemiBold" Foreground="#00E676" HorizontalAlignment="Right"/>
+                    </Grid>
+                    <Grid Margin="0,0,0,10">
+                        <TextBlock x:Name="ActiveDurationLabel" Text="Masa Aktif" FontSize="11" Foreground="#8F9CAE" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="ActiveDurationTxt" Text="Aktif" FontSize="11.5" FontWeight="SemiBold" Foreground="#00F2FE" HorizontalAlignment="Right"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- Right Panel: Detailed Subscription & System Cards -->
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Margin="8,0,0,12">
+                <StackPanel>
+                    <TextBlock x:Name="SubSysInfoTitle" Text="Informasi Berlangganan &amp; Sistem" FontSize="15" FontWeight="Bold" Foreground="White" Margin="8,0,0,12"/>
+
+                    <!-- License Details Card -->
+                    <Border Style="{StaticResource GlowCardStyle}" Padding="16" Margin="0,0,0,16">
+                        <StackPanel>
+                            <TextBlock x:Name="LicenseDetailsHeader" Text="DETAIL LISENSI" FontSize="10" FontWeight="Bold" Foreground="#8F9CAE" Margin="0,0,0,12"/>
+                            
+                            <Grid Margin="0,0,0,12">
+                                <StackPanel>
+                                    <TextBlock x:Name="LicenseCodeLabel" Text="Kode Lisensi" FontSize="11.5" Foreground="#8F9CAE" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="LicenseKeyTxt" Text="CLAYX-PUBLIC-FREE" FontSize="13" FontWeight="SemiBold" Foreground="White"/>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="ExpiryDateLabel" Text="Tanggal Kadaluarsa" FontSize="11.5" Foreground="#8F9CAE" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="ExpiryTxt" Text="Permanen (Lifetime)" FontSize="13" FontWeight="SemiBold" Foreground="White"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="VerificationStatusLabel" Text="Status Verifikasi" FontSize="11.5" Foreground="#8F9CAE" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="VerificationStatusValue" Text="Terverifikasi (VIP)" FontSize="13" FontWeight="SemiBold" Foreground="#FF9100"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Device Details Card -->
+                    <Border Style="{StaticResource GlowCardStyle}" Padding="16" Margin="0,0,0,16">
+                        <StackPanel>
+                            <TextBlock x:Name="DeviceDetailsHeader" Text="DETAIL PERANGKAT" FontSize="10" FontWeight="Bold" Foreground="#8F9CAE" Margin="0,0,0,12"/>
+
+                            <!-- HWID Card row with copy button -->
+                            <Grid Margin="0,0,0,16">
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock x:Name="HwidLabel" Text="Hardware ID (HWID)" FontSize="11.5" Foreground="#8F9CAE" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="HwidTxt" Text="unknown-hwid" FontSize="12" FontFamily="Consolas" FontWeight="SemiBold" Foreground="White"/>
+                                </StackPanel>
+                                <ui:Button x:Name="CopyHwidBtn" Content="Salin HWID" Icon="Copy24" Click="CopyHwid_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="12,6"/>
+                            </Grid>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="ComputerNameLabel" Text="Nama Komputer" FontSize="11.5" Foreground="#8F9CAE" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="PcNameTxt" Text="DESKTOP-PC" FontSize="13" FontWeight="SemiBold" Foreground="White"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="LocalIpLabel" Text="IP Address Lokal" FontSize="11.5" Foreground="#8F9CAE" Margin="0,0,0,4"/>
+                                    <TextBlock x:Name="IpAddressTxt" Text="127.0.0.1" FontSize="13" FontWeight="SemiBold" Foreground="White"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- OS Details Card -->
+                    <Border Style="{StaticResource GlowCardStyle}" Padding="16" Margin="0,0,0,16">
+                        <StackPanel>
+                            <TextBlock x:Name="OsInfoHeader" Text="INFORMASI OPERATING SYSTEM" FontSize="10" FontWeight="Bold" Foreground="#8F9CAE" Margin="0,0,0,12"/>
+                            
+                            <StackPanel>
+                                <TextBlock x:Name="OsVersionLabel" Text="OS Version" FontSize="11.5" Foreground="#8F9CAE" Margin="0,0,0,4"/>
+                                <TextBlock x:Name="OsVersionTxt" Text="Microsoft Windows 10/11 Enterprise x64" FontSize="13" FontWeight="SemiBold" Foreground="White"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

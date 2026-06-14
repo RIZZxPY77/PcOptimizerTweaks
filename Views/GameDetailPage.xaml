@@ -1,0 +1,156 @@
+<Page x:Class="PCOptimizer.Views.GameDetailPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCOptimizer.Views"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="850"
+      Title="Game Detail">
+
+    <Grid Background="Transparent" Margin="24,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Breadcrumb & Back Row -->
+        <Grid Grid.Row="0" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <ui:Button Grid.Column="0" x:Name="BackBtn" Icon="ArrowLeft24" Click="BackBtn_Click" Style="{StaticResource OutlineButtonStyle}" Width="36" Height="32" Padding="0" VerticalAlignment="Center"/>
+            
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0,0,0">
+                <TextBlock Text="Games" FontSize="12" Foreground="#8F9CAE"/>
+                <TextBlock Text="  /  " FontSize="12" Foreground="#8F9CAE"/>
+                <TextBlock Text="Library" FontSize="12" Foreground="#8F9CAE"/>
+                <TextBlock Text="  /  " FontSize="12" Foreground="#8F9CAE"/>
+                <TextBlock x:Name="BreadcrumbGameName" Text="ARC Raiders" FontSize="12" FontWeight="SemiBold" Foreground="#FF9100"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Title -->
+        <TextBlock Grid.Row="1" x:Name="GameTitle" Text="ARC Raiders" FontSize="26" FontWeight="Bold" Foreground="White" Margin="0,0,0,16"/>
+
+        <!-- Warning Notice Box -->
+        <Border Grid.Row="2" BorderBrush="#E5A93C" BorderThickness="1" Background="#1A1813" CornerRadius="6" Padding="16,12" Margin="0,0,0,24">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ui:SymbolIcon Grid.Column="0" Symbol="Warning24" Filled="True" FontSize="20" Foreground="#E5A93C" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" x:Name="WarningBoxTxt" Text="Game Settings and Pro Settings have limited compatibility. These features may not function in all games." FontSize="11" Foreground="#FFE0B2" VerticalAlignment="Center" Margin="12,0,0,0" TextWrapping="Wrap"/>
+            </Grid>
+        </Border>
+
+        <!-- Configuration Settings -->
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <!-- Optimization Presets Section -->
+                <TextBlock Text="Optimization Presets" FontSize="14" FontWeight="Bold" Foreground="White" Margin="0,0,0,12"/>
+                
+                <Grid Margin="0,0,0,24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Best Performance Card -->
+                    <Border Grid.Column="0" x:Name="BestPerfCard" Style="{StaticResource GlowCardStyle}" MouseLeftButtonDown="BestPerfCard_Click" Cursor="Hand" Margin="0,0,8,0" Padding="18">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Width="36" Height="36" CornerRadius="6" Background="#231F15" HorizontalAlignment="Left">
+                                <ui:SymbolIcon Symbol="Flash24" Filled="True" FontSize="20" Foreground="#FF9100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+
+                            <StackPanel Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Center">
+                                <TextBlock Text="Best Performance" FontSize="13" FontWeight="Bold" Foreground="White"/>
+                                <TextBlock Text="Includes 18 optimizations" FontSize="10" Foreground="#8F9CAE" Margin="0,2,0,0"/>
+                            </StackPanel>
+
+                            <ui:SymbolIcon x:Name="BestCheckIcon" Grid.Column="2" Symbol="CheckmarkCircle24" Filled="True" FontSize="20" Foreground="#FF9100" VerticalAlignment="Center" Visibility="Collapsed"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Lite Mode Card -->
+                    <Border Grid.Column="1" x:Name="LiteModeCard" Style="{StaticResource GlowCardStyle}" MouseLeftButtonDown="LiteModeCard_Click" Cursor="Hand" Margin="8,0,0,0" Padding="18">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Width="36" Height="36" CornerRadius="6" Background="#1D2E24" HorizontalAlignment="Left">
+                                <ui:SymbolIcon Symbol="LeafTwo24" Filled="True" FontSize="20" Foreground="#00E676" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+
+                            <StackPanel Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Center">
+                                <TextBlock Text="Lite Mode" FontSize="13" FontWeight="Bold" Foreground="White"/>
+                                <TextBlock Text="Includes 8 optimizations" FontSize="10" Foreground="#8F9CAE" Margin="0,2,0,0"/>
+                            </StackPanel>
+
+                            <ui:SymbolIcon x:Name="LiteCheckIcon" Grid.Column="2" Symbol="CheckmarkCircle24" Filled="True" FontSize="20" Foreground="#00E676" VerticalAlignment="Center" Visibility="Collapsed"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <!-- Game Settings Section -->
+                <Grid Margin="0,0,0,8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Game Settings" FontSize="14" FontWeight="Bold" Foreground="White" />
+                        <TextBlock Text="Your game supports extra configurable in-game settings." FontSize="10" Foreground="#8F9CAE" Margin="0,2,0,0" />
+                    </StackPanel>
+                    <ui:Button Grid.Column="1" x:Name="RevertBtn" Content="Revert Settings" Click="RevertBtn_Click" Style="{StaticResource OutlineButtonStyle}" BorderThickness="0" Foreground="#FF9100" Height="30" Padding="10,0" VerticalAlignment="Bottom"/>
+                </Grid>
+
+                <!-- Banner Tweak Applied details -->
+                <Border Style="{StaticResource GlowCardStyle}" Margin="0,8,0,0" Padding="1" BorderBrush="#222A3C" ClipToBounds="True">
+                    <Grid Height="140">
+                        <!-- Dark background gradient with visual representation -->
+                        <Border x:Name="GameVisualBorder">
+                            <!-- Overlay gradient -->
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                    <GradientStop Color="#FF151A26" Offset="0" />
+                                    <GradientStop Color="#00151A26" Offset="0.8" />
+                                    <GradientStop Color="#FF151A26" Offset="1" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+
+                        <StackPanel Margin="20" VerticalAlignment="Center">
+                            <TextBlock Text="Performance" FontSize="16" FontWeight="Bold" Foreground="#FF9100"/>
+                            <TextBlock x:Name="VisualDetailsTxt" Text="Recommended if you want the smoothest gameplay. Game visuals may be affected." FontSize="11" Foreground="#8F9CAE" Margin="0,6,0,12" TextWrapping="Wrap" MaxWidth="500" HorizontalAlignment="Left"/>
+                            
+                            <StackPanel Orientation="Horizontal">
+                                <Border Background="#1C352D" CornerRadius="4" BorderBrush="#00E676" BorderThickness="1" Padding="8,4" VerticalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <ui:SymbolIcon Symbol="Checkmark16" FontSize="10" Foreground="#00E676" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Currently Applied" FontSize="9" FontWeight="Bold" Foreground="#00E676" VerticalAlignment="Center" Margin="4,0,0,0"/>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

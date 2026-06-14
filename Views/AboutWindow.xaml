@@ -1,0 +1,27 @@
+<Window x:Class="PCOptimizer.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PCOptimizer.Views"
+        Title="About" Height="400" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#1E2A3A">
+    <Grid Margin="24">
+        <StackPanel>
+            <TextBlock Text="About" Style="{StaticResource HeaderTextPageStyle}" Margin="0,0,0,12"/>
+            <TextBlock Text="Pembuat: RizzXiters" FontSize="13" Foreground="White" Margin="0,4,0,0"/>
+            <TextBlock Text="Support: Nixkanaeru" FontSize="13" Foreground="White" Margin="0,4,0,0"/>
+            <TextBlock Text="Promotion: Jillyx" FontSize="13" Foreground="White" Margin="0,4,0,0"/>
+            <TextBlock Text="Team: Kiroru, ZheyMarket" FontSize="13" Foreground="White" Margin="0,4,0,12"/>
+            <!-- Multilingual credits -->
+            <StackPanel Orientation="Vertical" Margin="0,8,0,0">
+                <TextBlock Text="Created by RizzXiters" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                <TextBlock Text="إنشاء بواسطة RizzXiters" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                <TextBlock Text="RizzXiters が作成" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                <TextBlock Text="由 RizzXiters 创建" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                <TextBlock Text="สร้างโดย RizzXiters" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                <TextBlock Text="Erstellt von RizzXiters" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                <TextBlock Text="Criado por RizzXiters" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                <TextBlock Text="Creado por RizzXiters" FontSize="11" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+            </StackPanel>
+            <Button Content="Close" Width="80" Height="30" HorizontalAlignment="Right" Margin="0,20,0,0" Click="Close_Click" Style="{StaticResource OutlineButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</Window>

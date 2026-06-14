@@ -1,0 +1,1775 @@
+Renamed Types:
+
+[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer -> [PCOptimizer]A.B
+{
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer::GetEmulatorsStatus[0]( ) -> A
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer::OptimizeEmulator[3]( [System.Runtime]System.String, [System.Runtime]System.Boolean, [System.Runtime]System.Boolean ) -> A
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer::CheckIfInstalled[3]( [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.String& ) -> A
+
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer::.ctor[0]( ) skipped:  special name
+
+	System.Collections.Generic.List`1<PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo> [PCOptimizer]System.Collections.Generic.List`1<PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo> PCOptimizer.Services.EmulatorOptimizer::_emulators -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.GameDetector -> [PCOptimizer]A.b
+{
+	[PCOptimizer]PCOptimizer.Services.GameDetector::GetDetectedGames[0]( ) -> A
+	[PCOptimizer]PCOptimizer.Services.GameDetector::AddCustomGame[2]( [System.Runtime]System.String, [System.Runtime]System.String ) -> A
+	[PCOptimizer]PCOptimizer.Services.GameDetector::ScanForInstalledGames[0]( ) -> a
+	[PCOptimizer]PCOptimizer.Services.GameDetector::ApplyProcessBoost[1]( [System.Runtime]System.String ) -> A
+
+	[PCOptimizer]PCOptimizer.Services.GameDetector::.ctor[0]( ) skipped:  special name
+
+	System.Collections.Generic.List`1<PCOptimizer.Models.GameItem> [PCOptimizer]System.Collections.Generic.List`1<PCOptimizer.Models.GameItem> PCOptimizer.Services.GameDetector::_detectedGames -> A
+	System.Collections.Generic.HashSet`1<System.String> [PCOptimizer]System.Collections.Generic.HashSet`1<System.String> PCOptimizer.Services.GameDetector::_knownGameExecutables -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.HardwareDetector -> [PCOptimizer]A.C
+{
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::GetCpuUsage[0]( ) -> A
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::GetRamUsage[0]( ) -> a
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::GetCpuName[0]( ) -> B
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::GetCpuCores[0]( ) -> b
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::IsVirtualizationEnabled[0]( ) -> C
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::GetGpuName[0]( ) -> c
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::GetGpuVram[0]( ) -> D
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::GetOsName[0]( ) -> d
+
+	[PCOptimizer]PCOptimizer.Services.HardwareDetector::.ctor[0]( ) skipped:  special name
+
+	System.Diagnostics.PerformanceCounter [PCOptimizer]System.Diagnostics.PerformanceCounter PCOptimizer.Services.HardwareDetector::_cpuCounter -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.NativeMethods -> [PCOptimizer]A.D
+{
+	[PCOptimizer]PCOptimizer.Services.NativeMethods::EmptyWorkingSet[1]( [System.Runtime]System.IntPtr ) -> A
+	[PCOptimizer]PCOptimizer.Services.NativeMethods::OpenProcess[3]( [System.Runtime]System.UInt32, [System.Runtime]System.Boolean, [System.Runtime]System.UInt32 ) -> A
+	[PCOptimizer]PCOptimizer.Services.NativeMethods::CloseHandle[1]( [System.Runtime]System.IntPtr ) -> a
+	[PCOptimizer]PCOptimizer.Services.NativeMethods::SetProcessAffinityMask[2]( [System.Runtime]System.IntPtr, [System.Runtime]System.IntPtr ) -> A
+	[PCOptimizer]PCOptimizer.Services.NativeMethods::GetProcessAffinityMask[3]( [System.Runtime]System.IntPtr, [System.Runtime]System.IntPtr&, [System.Runtime]System.IntPtr& ) -> A
+
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Services.NativeMethods::PROCESS_QUERY_INFORMATION -> A
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Services.NativeMethods::PROCESS_SET_QUOTA -> a
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Services.NativeMethods::PROCESS_SET_INFORMATION -> B
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Services.NativeMethods::PROCESS_ALL_ACCESS -> b
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine -> [PCOptimizer]A.d
+{
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::SHEmptyRecycleBin[3]( [System.Runtime]System.IntPtr, [System.Runtime]System.String, [System.Runtime]System.UInt32 ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::add_OnLogMessage[1]( [System.Runtime]System.Action`1<[System.Runtime]System.String> ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::remove_OnLogMessage[1]( [System.Runtime]System.Action`1<[System.Runtime]System.String> ) -> a
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::Log[1]( [System.Runtime]System.String ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::CleanJunkFilesAsync[4]( [System.Runtime]System.Boolean, [System.Runtime]System.Boolean, [System.Runtime]System.Boolean, [System.Runtime]System.Boolean ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::CleanDirectory[1]( [System.Runtime]System.String ) -> a
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::GetDirectorySize[1]( [System.Runtime]System.IO.DirectoryInfo ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::BoostRamAsync[0]( ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::OptimizeNetworkPingAsync[0]( ) -> a
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::OptimizeStorageTrimAsync[0]( ) -> B
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::GetStartupItems[0]( ) -> b
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ToggleStartupItem[2]( [PCOptimizer]PCOptimizer.Models.StartupItem, [System.Runtime]System.Boolean ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ExtractPathFromCommand[1]( [System.Runtime]System.String ) -> B
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::EstimateStartupImpact[1]( [System.Runtime]System.String ) -> b
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyOptimizationProfileAsync[1]( [System.Runtime]System.String ) -> C
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyLowEndOptimizations[0]( ) -> C
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyMidEndOptimizations[0]( ) -> c
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyHighEndOptimizations[0]( ) -> D
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::RunPowercfgSetActive[1]( [System.Runtime]System.String ) -> c
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::StopService[1]( [System.Runtime]System.String ) -> D
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyMouseTweaks[1]( [System.Runtime]System.Boolean ) -> A
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyKeyboardTweaks[1]( [System.Runtime]System.Boolean ) -> a
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::CleanShaderCacheAsync[0]( ) -> d
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::OptimizeDnsAsync[1]( [System.Runtime]System.String ) -> d
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyGpuPriorityBoostAsync[0]( ) -> E
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyCpuPriorityBoostAsync[0]( ) -> e
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyServiceOptimizerAsync[0]( ) -> F
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::DisableService[1]( [System.Runtime]System.String ) -> E
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::ApplyRegistryCleanerAsync[0]( ) -> f
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::CleanBrowserCacheAsync[0]( ) -> G
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<OptimizeNetworkPingAsync>b__12_0[0]( ) -> g
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<OptimizeStorageTrimAsync>b__13_0[0]( ) -> H
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<CleanShaderCacheAsync>b__26_0[0]( ) -> h
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<ApplyGpuPriorityBoostAsync>b__28_0[0]( ) -> I
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<ApplyCpuPriorityBoostAsync>b__29_0[0]( ) -> i
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<ApplyServiceOptimizerAsync>b__30_0[0]( ) -> J
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<ApplyRegistryCleanerAsync>b__32_0[0]( ) -> j
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::<CleanBrowserCacheAsync>b__33_0[0]( ) -> K
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine::.ctor[0]( ) skipped:  special name
+
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Services.OptimizerEngine::SHERB_NOCONFIRMATION -> A
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Services.OptimizerEngine::SHERB_NOPROGRESSUI -> a
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Services.OptimizerEngine::SHERB_NOSOUND -> B
+	System.Action`1<System.String> [PCOptimizer]System.Action`1<System.String> PCOptimizer.Services.OptimizerEngine::OnLogMessage -> A
+
+	System.Action`1<System.String> [PCOptimizer]System.Action`1<System.String> PCOptimizer.Services.OptimizerEngine::OnLogMessage -> dropped
+}
+
+[PCOptimizer]PCOptimizer.Services.TranslationService -> [PCOptimizer]A.E
+{
+	[PCOptimizer]PCOptimizer.Services.TranslationService::get_CurrentLanguage[0]( ) -> A
+	[PCOptimizer]PCOptimizer.Services.TranslationService::set_CurrentLanguage[1]( [System.Runtime]System.String ) -> A
+	[PCOptimizer]PCOptimizer.Services.TranslationService::LoadLanguage[0]( ) -> a
+	[PCOptimizer]PCOptimizer.Services.TranslationService::Get[1]( [System.Runtime]System.String ) -> a
+	[PCOptimizer]PCOptimizer.Services.TranslationService::InitializeTranslations[0]( ) -> B
+
+	[PCOptimizer]PCOptimizer.Services.TranslationService::.cctor[0]( ) skipped:  special name
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.TranslationService::<CurrentLanguage>k__BackingField -> A
+	System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.Dictionary`2<System.String,System.String>> [PCOptimizer]System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.Dictionary`2<System.String,System.String>> PCOptimizer.Services.TranslationService::Translations -> A
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.TranslationService::CurrentLanguage -> dropped
+}
+
+[PCOptimizer]<PrivateImplementationDetails> -> [PCOptimizer]A.e
+{
+	<PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 [PCOptimizer]<PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::675E3C683AB5154811F749E2A6920526D009017709C0097C5209CADA6D9C9862 -> A
+	<PrivateImplementationDetails>/__StaticArrayInitTypeSize=46 [PCOptimizer]<PrivateImplementationDetails>/__StaticArrayInitTypeSize=46 <PrivateImplementationDetails>::9B59819ED2D577554ACF3895EB1DD4985C880819BDC1EE7AE6D50682B7955CDE -> A
+	<PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 [PCOptimizer]<PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::E982B4819498FEE0B352861FC81573B749A7BB7BD6329108AB5B7EA6804515C7 -> A
+	<PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 [PCOptimizer]<PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::F71F2CDC82051E32AD6F67F8A6ED0224E4D446C745B8ECBE7A216D663518DE8E -> a
+}
+
+[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo -> [PCOptimizer]A.B/A
+{
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_Name[0]( ) -> A
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_Name[1]( [System.Runtime]System.String ) -> A
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_ExecutableName[0]( ) -> a
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_ExecutableName[1]( [System.Runtime]System.String ) -> a
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_IsInstalled[0]( ) -> B
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_IsInstalled[1]( [System.Runtime]System.Boolean ) -> A
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_IsRunning[0]( ) -> b
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_IsRunning[1]( [System.Runtime]System.Boolean ) -> a
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_InstalledPath[0]( ) -> C
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_InstalledPath[1]( [System.Runtime]System.String ) -> B
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_PriorityStatus[0]( ) -> c
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_PriorityStatus[1]( [System.Runtime]System.String ) -> b
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_AffinityStatus[0]( ) -> D
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_AffinityStatus[1]( [System.Runtime]System.String ) -> C
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_LogoUrl[0]( ) -> d
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_LogoUrl[1]( [System.Runtime]System.String ) -> c
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_CpuUsage[0]( ) -> E
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_CpuUsage[1]( [System.Runtime]System.String ) -> D
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_RamUsage[0]( ) -> e
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_RamUsage[1]( [System.Runtime]System.String ) -> d
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::get_BoostDescription[0]( ) -> F
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::set_BoostDescription[1]( [System.Runtime]System.String ) -> E
+
+	[PCOptimizer]PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::.ctor[0]( ) skipped:  special name
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<Name>k__BackingField -> A
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<ExecutableName>k__BackingField -> a
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<IsInstalled>k__BackingField -> A
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<IsRunning>k__BackingField -> a
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<InstalledPath>k__BackingField -> B
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<PriorityStatus>k__BackingField -> b
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<AffinityStatus>k__BackingField -> C
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<LogoUrl>k__BackingField -> c
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<CpuUsage>k__BackingField -> D
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<RamUsage>k__BackingField -> d
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::<BoostDescription>k__BackingField -> E
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::Name -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::ExecutableName -> dropped
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::IsInstalled -> dropped
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::IsRunning -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::InstalledPath -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::PriorityStatus -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::AffinityStatus -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::LogoUrl -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::CpuUsage -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::RamUsage -> dropped
+	System.String [PCOptimizer]System.String PCOptimizer.Services.EmulatorOptimizer/EmulatorInfo::BoostDescription -> dropped
+}
+
+[PCOptimizer]PCOptimizer.Services.GameDetector/<>c__DisplayClass4_0 -> [PCOptimizer]A.b/A
+{
+	[PCOptimizer]PCOptimizer.Services.GameDetector/<>c__DisplayClass4_0::<AddCustomGame>b__0[1]( [PCOptimizer]PCOptimizer.Models.GameItem ) -> A
+
+	[PCOptimizer]PCOptimizer.Services.GameDetector/<>c__DisplayClass4_0::.ctor[0]( ) skipped:  special name
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.GameDetector/<>c__DisplayClass4_0::fileName -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass11_0 -> [PCOptimizer]A.d/A
+{
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass11_0::<BoostRamAsync>b__0[0]( ) -> A
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass11_0::.ctor[0]( ) skipped:  special name
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass11_0::optimizedProcesses -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass18_0 -> [PCOptimizer]A.d/a
+{
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass18_0::<ApplyOptimizationProfileAsync>b__0[0]( ) -> A
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass18_0::.ctor[0]( ) skipped:  special name
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass18_0::profile -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass18_0::<>4__this -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass27_0 -> [PCOptimizer]A.d/B
+{
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass27_0::<OptimizeDnsAsync>b__0[0]( ) -> A
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass27_0::.ctor[0]( ) skipped:  special name
+
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass27_0::<>4__this -> A
+	System.String [PCOptimizer]System.String PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass27_0::provider -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0 -> [PCOptimizer]A.d/b
+{
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::<CleanJunkFilesAsync>b__0[0]( ) -> A
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::.ctor[0]( ) skipped:  special name
+
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::cleanTemp -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::<>4__this -> A
+	System.Int64 [PCOptimizer]System.Int64 PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::bytesCleaned -> A
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::cleanPrefetch -> a
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::cleanLogs -> B
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0::cleanRecycleBin -> b
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyCpuPriorityBoostAsync>d__29 -> [PCOptimizer]A.d/C
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyCpuPriorityBoostAsync>d__29::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyCpuPriorityBoostAsync>d__29::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<ApplyCpuPriorityBoostAsync>d__29::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<ApplyCpuPriorityBoostAsync>d__29::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<ApplyCpuPriorityBoostAsync>d__29::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<ApplyCpuPriorityBoostAsync>d__29::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyGpuPriorityBoostAsync>d__28 -> [PCOptimizer]A.d/c
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyGpuPriorityBoostAsync>d__28::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyGpuPriorityBoostAsync>d__28::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<ApplyGpuPriorityBoostAsync>d__28::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<ApplyGpuPriorityBoostAsync>d__28::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<ApplyGpuPriorityBoostAsync>d__28::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<ApplyGpuPriorityBoostAsync>d__28::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18 -> [PCOptimizer]A.d/D
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18::<>t__builder -> A
+	System.String [PCOptimizer]System.String PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18::profile -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<ApplyOptimizationProfileAsync>d__18::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyRegistryCleanerAsync>d__32 -> [PCOptimizer]A.d/d
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyRegistryCleanerAsync>d__32::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyRegistryCleanerAsync>d__32::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<ApplyRegistryCleanerAsync>d__32::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<ApplyRegistryCleanerAsync>d__32::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<ApplyRegistryCleanerAsync>d__32::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<ApplyRegistryCleanerAsync>d__32::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyServiceOptimizerAsync>d__30 -> [PCOptimizer]A.d/E
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyServiceOptimizerAsync>d__30::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<ApplyServiceOptimizerAsync>d__30::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<ApplyServiceOptimizerAsync>d__30::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<ApplyServiceOptimizerAsync>d__30::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<ApplyServiceOptimizerAsync>d__30::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<ApplyServiceOptimizerAsync>d__30::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11 -> [PCOptimizer]A.d/e
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int32> [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int32> PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11::<>4__this -> A
+	PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass11_0 [PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass11_0 PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11::<>8__1 -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<BoostRamAsync>d__11::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanBrowserCacheAsync>d__33 -> [PCOptimizer]A.d/F
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanBrowserCacheAsync>d__33::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanBrowserCacheAsync>d__33::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<CleanBrowserCacheAsync>d__33::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<CleanBrowserCacheAsync>d__33::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<CleanBrowserCacheAsync>d__33::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<CleanBrowserCacheAsync>d__33::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8 -> [PCOptimizer]A.d/f
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int64> [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Int64> PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::<>t__builder -> A
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::cleanTemp -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::<>4__this -> A
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::cleanPrefetch -> a
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::cleanLogs -> B
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::cleanRecycleBin -> b
+	PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0 [PCOptimizer]PCOptimizer.Services.OptimizerEngine/<>c__DisplayClass8_0 PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::<>8__1 -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<CleanJunkFilesAsync>d__8::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanShaderCacheAsync>d__26 -> [PCOptimizer]A.d/G
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanShaderCacheAsync>d__26::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<CleanShaderCacheAsync>d__26::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<CleanShaderCacheAsync>d__26::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<CleanShaderCacheAsync>d__26::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<CleanShaderCacheAsync>d__26::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<CleanShaderCacheAsync>d__26::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27 -> [PCOptimizer]A.d/g
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27::<>4__this -> A
+	System.String [PCOptimizer]System.String PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27::provider -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<OptimizeDnsAsync>d__27::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeNetworkPingAsync>d__12 -> [PCOptimizer]A.d/H
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeNetworkPingAsync>d__12::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeNetworkPingAsync>d__12::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<OptimizeNetworkPingAsync>d__12::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<OptimizeNetworkPingAsync>d__12::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<OptimizeNetworkPingAsync>d__12::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<OptimizeNetworkPingAsync>d__12::<>u__1 -> A
+}
+
+[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeStorageTrimAsync>d__13 -> [PCOptimizer]A.d/h
+{
+
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeStorageTrimAsync>d__13::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.OptimizerEngine/<OptimizeStorageTrimAsync>d__13::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.OptimizerEngine/<OptimizeStorageTrimAsync>d__13::<>1__state -> A
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Services.OptimizerEngine/<OptimizeStorageTrimAsync>d__13::<>t__builder -> A
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Services.OptimizerEngine/<OptimizeStorageTrimAsync>d__13::<>4__this -> A
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Services.OptimizerEngine/<OptimizeStorageTrimAsync>d__13::<>u__1 -> A
+}
+
+[PCOptimizer]XamlGeneratedNamespace.GeneratedInternalTypeHelper -> [PCOptimizer]A.A
+{
+
+	[PCOptimizer]XamlGeneratedNamespace.GeneratedInternalTypeHelper::CreateInstance[2]( [System.Runtime]System.Type, [System.Runtime]System.Globalization.CultureInfo ) skipped:  external base class or interface
+	[PCOptimizer]XamlGeneratedNamespace.GeneratedInternalTypeHelper::GetPropertyValue[3]( [System.Runtime]System.Reflection.PropertyInfo, [System.Runtime]System.Object, [System.Runtime]System.Globalization.CultureInfo ) skipped:  external base class or interface
+	[PCOptimizer]XamlGeneratedNamespace.GeneratedInternalTypeHelper::SetPropertyValue[4]( [System.Runtime]System.Reflection.PropertyInfo, [System.Runtime]System.Object, [System.Runtime]System.Object, [System.Runtime]System.Globalization.CultureInfo ) skipped:  external base class or interface
+	[PCOptimizer]XamlGeneratedNamespace.GeneratedInternalTypeHelper::CreateDelegate[3]( [System.Runtime]System.Type, [System.Runtime]System.Object, [System.Runtime]System.String ) skipped:  external base class or interface
+	[PCOptimizer]XamlGeneratedNamespace.GeneratedInternalTypeHelper::AddEventHandler[3]( [System.Runtime]System.Reflection.EventInfo, [System.Runtime]System.Object, [System.Runtime]System.Delegate ) skipped:  external base class or interface
+	[PCOptimizer]XamlGeneratedNamespace.GeneratedInternalTypeHelper::.ctor[0]( ) skipped:  special name
+}
+
+[PCOptimizer]PCOptimizer.Services.DriverDetector -> [PCOptimizer]A.a
+{
+	[PCOptimizer]PCOptimizer.Services.DriverDetector::GetSystemDrivers[0]( ) -> A
+	[PCOptimizer]PCOptimizer.Services.DriverDetector::MapDeviceClass[1]( [System.Runtime]System.String ) -> A
+	[PCOptimizer]PCOptimizer.Services.DriverDetector::FormatWmiDate[1]( [System.Runtime]System.String ) -> a
+
+	[PCOptimizer]PCOptimizer.Services.DriverDetector::.ctor[0]( ) skipped:  special name
+}
+
+[PCOptimizer]PCOptimizer.Services.Logger -> [PCOptimizer]A.c
+{
+	[PCOptimizer]PCOptimizer.Services.Logger::Log[1]( [System.Runtime]System.String ) -> A
+}
+
+[PCOptimizer]<PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 -> [PCOptimizer]A.e/A
+{
+}
+
+[PCOptimizer]<PrivateImplementationDetails>/__StaticArrayInitTypeSize=46 -> [PCOptimizer]A.e/a
+{
+}
+
+[PCOptimizer]<PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 -> [PCOptimizer]A.e/B
+{
+}
+
+Skipped Types:
+
+[PCOptimizer]PCOptimizer.App skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.App::OnStartup[1]( [PresentationFramework]System.Windows.StartupEventArgs ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.App::EnsureLogDirectory[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::LogStartup[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::LogCrash[2]( [System.Runtime]System.Exception, [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::CurrentDomain_UnhandledException[2]( [System.Runtime]System.Object, [System.Runtime]System.UnhandledExceptionEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::App_DispatcherUnhandledException[2]( [System.Runtime]System.Object, [WindowsBase]System.Windows.Threading.DispatcherUnhandledExceptionEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::TaskScheduler_UnobservedTaskException[2]( [System.Runtime]System.Object, [System.Runtime]System.Threading.Tasks.UnobservedTaskExceptionEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::ShowErrorAndContinue[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::PlayStartupSound[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::InitializeComponent[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::Main[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.App::.ctor[0]( ) skipped:  special name
+
+
+	System.Windows.Media.MediaPlayer [PCOptimizer]System.Windows.Media.MediaPlayer PCOptimizer.App::_startupPlayer skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.App::CrashLogPath skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.App::StartupLogPath skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.App::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Logger skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Logger::.cctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Logger::Startup[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Logger::Crash[2]( [System.Runtime]System.Exception, [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Logger::Write[2]( [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Logger::LogDirectory skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Logger::StartupLog skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Logger::CrashLog skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.MainWindow skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.MainWindow::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.MainWindow::MainWindow_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow::OnKeyDown[1]( [PresentationCore]System.Windows.Input.KeyEventArgs ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.MainWindow::TitleBar_MouseLeftButtonDown[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow::DoNothing[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow::About_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow::ShowToast[3]( [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.Boolean ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.MainWindow::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.MainWindow::TitleBarText skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.MainWindow::CustomCloseBtn skipped:  type rule in configuration
+	Wpf.Ui.Controls.NavigationView [PCOptimizer]Wpf.Ui.Controls.NavigationView PCOptimizer.MainWindow::RootNavigation skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.MainWindow::NotificationToast skipped:  type rule in configuration
+	System.Windows.Media.TranslateTransform [PCOptimizer]System.Windows.Media.TranslateTransform PCOptimizer.MainWindow::ToastTranslate skipped:  type rule in configuration
+	Wpf.Ui.Controls.SymbolIcon [PCOptimizer]Wpf.Ui.Controls.SymbolIcon PCOptimizer.MainWindow::ToastIcon skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.MainWindow::ToastTitle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.MainWindow::ToastMsg skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.MainWindow::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.AboutPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.AboutPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.AboutPage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.AboutPage::AboutPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.AboutPage::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.AboutPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::PageTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::PageSubtitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::CreatorLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::CreatorDesc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::FounderLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::FounderDesc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::SalesLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::SalesDesc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::PromotionLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::PromotionDesc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::VisionTitle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::VisionDesc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::ThankYouText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.AboutPage::MadeByText skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.AboutPage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.AboutWindow skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.AboutWindow::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.AboutWindow::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.AboutWindow::Close_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.AboutWindow::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.AboutWindow::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::get_GridColumns[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::set_GridColumns[1]( [System.Runtime]System.Int32 ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::DashboardPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::DashboardPage_Unloaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::MonitorTimer_Tick[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::UpdateSystemStats[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::Page_SizeChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.SizeChangedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::InitializeTweaksData[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::FilterAndBindTweaks[2]( [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::SelectTweak[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::TweakCard_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::RunCard_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::RunTweakBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::ExecuteSelectedTweak[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::CleanDiscordFolderAsync[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::BulkBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::Filter_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::SearchBox_TextChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.TextChangedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::ScheduleBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::System.Windows.Markup.IStyleConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage::.cctor[0]( ) skipped:  special name
+
+
+	System.Collections.Generic.List`1<PCOptimizer.Models.TweakItem> [PCOptimizer]System.Collections.Generic.List`1<PCOptimizer.Models.TweakItem> PCOptimizer.Views.DashboardPage::_allTweaks skipped:  type rule in configuration
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Views.DashboardPage::_optimizerEngine skipped:  type rule in configuration
+	PCOptimizer.Services.HardwareDetector [PCOptimizer]PCOptimizer.Services.HardwareDetector PCOptimizer.Views.DashboardPage::_hardwareDetector skipped:  type rule in configuration
+	System.Windows.Threading.DispatcherTimer [PCOptimizer]System.Windows.Threading.DispatcherTimer PCOptimizer.Views.DashboardPage::_monitorTimer skipped:  type rule in configuration
+	PCOptimizer.Models.TweakItem [PCOptimizer]PCOptimizer.Models.TweakItem PCOptimizer.Views.DashboardPage::_selectedTweak skipped:  type rule in configuration
+	System.Windows.DependencyProperty [PCOptimizer]System.Windows.DependencyProperty PCOptimizer.Views.DashboardPage::GridColumnsProperty skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::PageTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::PageSubtitleText skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.DashboardPage::BulkBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::CpuMonitorLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::CpuUsageTxt skipped:  type rule in configuration
+	System.Windows.Controls.ProgressBar [PCOptimizer]System.Windows.Controls.ProgressBar PCOptimizer.Views.DashboardPage::CpuProgressBar skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::RamMonitorLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::RamUsageTxt skipped:  type rule in configuration
+	System.Windows.Controls.ProgressBar [PCOptimizer]System.Windows.Controls.ProgressBar PCOptimizer.Views.DashboardPage::RamProgressBar skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::ReclaimedLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::CleanedSpaceTxt skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.DashboardPage::TabRecommended skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.DashboardPage::TabSystem skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.DashboardPage::TabGaming skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.DashboardPage::TabHardware skipped:  type rule in configuration
+	Wpf.Ui.Controls.TextBox [PCOptimizer]Wpf.Ui.Controls.TextBox PCOptimizer.Views.DashboardPage::SearchBox skipped:  type rule in configuration
+	System.Windows.Controls.StackPanel [PCOptimizer]System.Windows.Controls.StackPanel PCOptimizer.Views.DashboardPage::RecSection skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::RecHeaderTitle skipped:  type rule in configuration
+	System.Windows.Controls.ItemsControl [PCOptimizer]System.Windows.Controls.ItemsControl PCOptimizer.Views.DashboardPage::RecommendedItemsCtrl skipped:  type rule in configuration
+	System.Windows.Controls.StackPanel [PCOptimizer]System.Windows.Controls.StackPanel PCOptimizer.Views.DashboardPage::SysSection skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::SysHeaderTitle skipped:  type rule in configuration
+	System.Windows.Controls.ItemsControl [PCOptimizer]System.Windows.Controls.ItemsControl PCOptimizer.Views.DashboardPage::SystemItemsCtrl skipped:  type rule in configuration
+	System.Windows.Controls.Grid [PCOptimizer]System.Windows.Controls.Grid PCOptimizer.Views.DashboardPage::DetailsGrid skipped:  type rule in configuration
+	Wpf.Ui.Controls.SymbolIcon [PCOptimizer]Wpf.Ui.Controls.SymbolIcon PCOptimizer.Views.DashboardPage::DetailIcon skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::DetailTitle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::DetailDesc skipped:  type rule in configuration
+	System.Windows.Controls.StackPanel [PCOptimizer]System.Windows.Controls.StackPanel PCOptimizer.Views.DashboardPage::CleanupOptionsPanel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::CleanupTitleLabel skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.DashboardPage::SimpleCleanupRadio skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::SimpleRadioLabel skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.DashboardPage::AdvancedCleanupRadio skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::AdvancedRadioLabel skipped:  type rule in configuration
+	System.Windows.Controls.StackPanel [PCOptimizer]System.Windows.Controls.StackPanel PCOptimizer.Views.DashboardPage::DnsOptionsPanel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::CleanupTypeLabel skipped:  type rule in configuration
+	System.Windows.Controls.ComboBox [PCOptimizer]System.Windows.Controls.ComboBox PCOptimizer.Views.DashboardPage::DnsComboBox skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::DnsServerLabel skipped:  type rule in configuration
+	System.Windows.Controls.StackPanel [PCOptimizer]System.Windows.Controls.StackPanel PCOptimizer.Views.DashboardPage::GeneralChangesPanel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::DetailChangesTxt skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.DashboardPage::RunTweakBtn skipped:  type rule in configuration
+	System.Windows.Controls.Grid [PCOptimizer]System.Windows.Controls.Grid PCOptimizer.Views.DashboardPage::ProgressGrid skipped:  type rule in configuration
+	Wpf.Ui.Controls.ProgressRing [PCOptimizer]Wpf.Ui.Controls.ProgressRing PCOptimizer.Views.DashboardPage::TweakProgressRing skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::ProgressStatusTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.DashboardPage::ProgressPercentTxt skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.DashboardPage::ScheduleBtn skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.DashboardPage::_contentLoaded skipped:  type rule in configuration
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.DashboardPage::GridColumns skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DriversPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DriversPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.DriversPage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DriversPage::DriversPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::LoadDriversAsync[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::ScanDriversBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::OpenNvidiaLink_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::OpenAmdLink_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::OpenIntelLink_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::OpenUrl[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DriversPage::<LoadDriversAsync>b__3_0[0]( ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Services.DriverDetector [PCOptimizer]PCOptimizer.Services.DriverDetector PCOptimizer.Views.DriversPage::_driverDetector skipped:  type rule in configuration
+	System.Windows.Controls.ListView [PCOptimizer]System.Windows.Controls.ListView PCOptimizer.Views.DriversPage::DriversListView skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.DriversPage::ScanDriversBtn skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.DriversPage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.EmulatorPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::EmulatorPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::EmulatorPage_Unloaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::EmuTimer_Tick[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::CheckVirtualizationStatus[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::RefreshEmulatorList[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::OptimizeEmuBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.EmulatorPage::System.Windows.Markup.IStyleConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Services.EmulatorOptimizer [PCOptimizer]PCOptimizer.Services.EmulatorOptimizer PCOptimizer.Views.EmulatorPage::_emuOptimizer skipped:  type rule in configuration
+	PCOptimizer.Services.HardwareDetector [PCOptimizer]PCOptimizer.Services.HardwareDetector PCOptimizer.Views.EmulatorPage::_hardwareDetector skipped:  type rule in configuration
+	System.Windows.Threading.DispatcherTimer [PCOptimizer]System.Windows.Threading.DispatcherTimer PCOptimizer.Views.EmulatorPage::_emuTimer skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::PageTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::PageSubtitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::LeftColumnTitleText skipped:  type rule in configuration
+	System.Windows.Controls.ListBox [PCOptimizer]System.Windows.Controls.ListBox PCOptimizer.Views.EmulatorPage::EmuListView skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.Views.EmulatorPage::NoActiveEmulatorCard skipped:  type rule in configuration
+	Wpf.Ui.Controls.SymbolIcon [PCOptimizer]Wpf.Ui.Controls.SymbolIcon PCOptimizer.Views.EmulatorPage::NoActiveIcon skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::NoActiveTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::NoActiveDescText skipped:  type rule in configuration
+	Wpf.Ui.Controls.SymbolIcon [PCOptimizer]Wpf.Ui.Controls.SymbolIcon PCOptimizer.Views.EmulatorPage::VirtIcon skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::VirtStatusTitle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::VirtStatusDesc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::GpuTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::GpuDescText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::GpuPriorityTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::GpuPriorityDescText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::CpuPolicyTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.EmulatorPage::CpuPolicyDescText skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.EmulatorPage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.GameDetailPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::.ctor[1]( [PCOptimizer]PCOptimizer.Models.GameItem ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::GameDetailPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::BackBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::BestPerfCard_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::LiteModeCard_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::RevertBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::UpdatePresetSelectionVisuals[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::ApplyGameOptimizations[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameDetailPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Models.GameItem [PCOptimizer]PCOptimizer.Models.GameItem PCOptimizer.Views.GameDetailPage::_game skipped:  type rule in configuration
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Views.GameDetailPage::_optimizerEngine skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.GameDetailPage::BackBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.GameDetailPage::BreadcrumbGameName skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.GameDetailPage::GameTitle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.GameDetailPage::WarningBoxTxt skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.Views.GameDetailPage::BestPerfCard skipped:  type rule in configuration
+	Wpf.Ui.Controls.SymbolIcon [PCOptimizer]Wpf.Ui.Controls.SymbolIcon PCOptimizer.Views.GameDetailPage::BestCheckIcon skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.Views.GameDetailPage::LiteModeCard skipped:  type rule in configuration
+	Wpf.Ui.Controls.SymbolIcon [PCOptimizer]Wpf.Ui.Controls.SymbolIcon PCOptimizer.Views.GameDetailPage::LiteCheckIcon skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.GameDetailPage::RevertBtn skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.Views.GameDetailPage::GameVisualBorder skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.GameDetailPage::VisualDetailsTxt skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.GameDetailPage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.GameModePage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.GameModePage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.GameModePage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.GameModePage::GameModePage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::RefreshGamesGrid[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::RefreshBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::AddGameBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::GamePoster_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::LaunchGame_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::OptimizeGame_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.GameModePage::System.Windows.Markup.IStyleConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Services.GameDetector [PCOptimizer]PCOptimizer.Services.GameDetector PCOptimizer.Views.GameModePage::_gameDetector skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.GameModePage::PageTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.GameModePage::PageSubtitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.GameModePage::LibraryTitleText skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.GameModePage::AddGameBtn skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.GameModePage::RefreshBtn skipped:  type rule in configuration
+	System.Windows.Controls.ItemsControl [PCOptimizer]System.Windows.Controls.ItemsControl PCOptimizer.Views.GameModePage::GamesGridItemsControl skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.GameModePage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.LoadingWindow skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::IndonesianBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::EnglishBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::JapaneseBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::ChineseBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::ArabicBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::PortugueseBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::SpanishBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::RussianBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::GermanBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::FrenchBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::KoreanBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::TurkishBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::TransitionToLoading[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::StartLoadingSequence[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Views.LoadingWindow::_selectedLanguage skipped:  type rule in configuration
+	System.Windows.Controls.StackPanel [PCOptimizer]System.Windows.Controls.StackPanel PCOptimizer.Views.LoadingWindow::LanguageSelectionPanel skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::IndonesianBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::EnglishBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::SpanishBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::FrenchBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::GermanBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::RussianBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::PortugueseBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::ChineseBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::JapaneseBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::KoreanBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::TurkishBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoadingWindow::ArabicBtn skipped:  type rule in configuration
+	System.Windows.Controls.StackPanel [PCOptimizer]System.Windows.Controls.StackPanel PCOptimizer.Views.LoadingWindow::LoadingProgressPanel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoadingWindow::StatusTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoadingWindow::StatusDescriptionText skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.LoadingWindow::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.LoginWindow skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.LoginWindow::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.LoginWindow::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.LoginWindow::LoginWindow_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoginWindow::TitleBar_MouseLeftButtonDown[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoginWindow::CloseBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoginWindow::LoginButton_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.LoginWindow::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoginWindow::TitleBarText skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.LoginWindow::CloseBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoginWindow::BrandTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoginWindow::BrandSubText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoginWindow::WarningTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoginWindow::WarningBodyText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoginWindow::InputLabelText skipped:  type rule in configuration
+	Wpf.Ui.Controls.TextBox [PCOptimizer]Wpf.Ui.Controls.TextBox PCOptimizer.Views.LoginWindow::KeyTextBox skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.LoginWindow::LoginBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.LoginWindow::FooterText skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.LoginWindow::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::SystemParametersInfo[4]( [System.Runtime]System.UInt32, [System.Runtime]System.UInt32, [System.Runtime]System.UInt32, [System.Runtime]System.UInt32 ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::MouseKeyboardPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::MouseTweakToggle_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::MouseTweakToggle_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::KeyboardTweakToggle_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::KeyboardTweakToggle_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::UsbSuspendToggle_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::UsbSuspendToggle_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::PollingPriorityToggle_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::PollingPriorityToggle_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::SetUsbSelectiveSuspend[1]( [System.Runtime]System.Boolean ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::PointerSpeedSlider_ValueChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.RoutedPropertyChangedEventArgs`1<[System.Runtime]System.Double> ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::SensiXSlider_ValueChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.RoutedPropertyChangedEventArgs`1<[System.Runtime]System.Double> ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::SensiYSlider_ValueChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.RoutedPropertyChangedEventArgs`1<[System.Runtime]System.Double> ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::ApplySensitivity_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::ApplyHardware_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::AutoSaveToggle_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::AutoSaveToggle_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::SaveAutoSaveState[1]( [System.Runtime]System.Boolean ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::TriggerAutoSave[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::ExportConfig_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::ImportConfig_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::GetSelectedDpiValue[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::GetSelectedHzValue[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::SaveAllSettingsToRegistry[1]( [PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_0[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_1[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_2[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_3[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_4[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_5[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_6[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_7[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_8[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage::<.ctor>b__6_9[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Views.MouseKeyboardPage::_optimizerEngine skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage::_isInitialLoading skipped:  type rule in configuration
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Views.MouseKeyboardPage::SPI_SETMOUSESPEED skipped:  type rule in configuration
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Views.MouseKeyboardPage::SPIF_UPDATEINIFILE skipped:  type rule in configuration
+	System.UInt32 [PCOptimizer]System.UInt32 PCOptimizer.Views.MouseKeyboardPage::SPIF_SENDCHANGE skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::PageHeaderText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::PageSubtitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card1Title skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card1Desc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card1ActivateText skipped:  type rule in configuration
+	Wpf.Ui.Controls.ToggleSwitch [PCOptimizer]Wpf.Ui.Controls.ToggleSwitch PCOptimizer.Views.MouseKeyboardPage::MouseTweakToggle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card2Title skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card2Desc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card2ActivateText skipped:  type rule in configuration
+	Wpf.Ui.Controls.ToggleSwitch [PCOptimizer]Wpf.Ui.Controls.ToggleSwitch PCOptimizer.Views.MouseKeyboardPage::KeyboardTweakToggle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card3Title skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card3Desc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card3ActivateText skipped:  type rule in configuration
+	Wpf.Ui.Controls.ToggleSwitch [PCOptimizer]Wpf.Ui.Controls.ToggleSwitch PCOptimizer.Views.MouseKeyboardPage::UsbSuspendToggle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card4Title skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card4Desc skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card4ActivateText skipped:  type rule in configuration
+	Wpf.Ui.Controls.ToggleSwitch [PCOptimizer]Wpf.Ui.Controls.ToggleSwitch PCOptimizer.Views.MouseKeyboardPage::PollingPriorityToggle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card5Title skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::PointerSpeedLabelText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::PointerSpeedValueText skipped:  type rule in configuration
+	System.Windows.Controls.Slider [PCOptimizer]System.Windows.Controls.Slider PCOptimizer.Views.MouseKeyboardPage::PointerSpeedSlider skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::SensiXLabelText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::SensiXValueText skipped:  type rule in configuration
+	System.Windows.Controls.Slider [PCOptimizer]System.Windows.Controls.Slider PCOptimizer.Views.MouseKeyboardPage::SensiXSlider skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::SensiYLabelText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::SensiYValueText skipped:  type rule in configuration
+	System.Windows.Controls.Slider [PCOptimizer]System.Windows.Controls.Slider PCOptimizer.Views.MouseKeyboardPage::SensiYSlider skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.MouseKeyboardPage::ApplySensitivityBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card6Title skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::DpiLabelText skipped:  type rule in configuration
+	System.Windows.Controls.ComboBox [PCOptimizer]System.Windows.Controls.ComboBox PCOptimizer.Views.MouseKeyboardPage::DpiComboBox skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::HzLabelText skipped:  type rule in configuration
+	System.Windows.Controls.ComboBox [PCOptimizer]System.Windows.Controls.ComboBox PCOptimizer.Views.MouseKeyboardPage::HzComboBox skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::HardwareFooterText skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.MouseKeyboardPage::ApplyHardwareBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card7Title skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::Card7DescText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::AutoSaveLabelText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.MouseKeyboardPage::AutoSaveSubLabelText skipped:  type rule in configuration
+	Wpf.Ui.Controls.ToggleSwitch [PCOptimizer]Wpf.Ui.Controls.ToggleSwitch PCOptimizer.Views.MouseKeyboardPage::AutoSaveToggle skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.MouseKeyboardPage::ExportConfigBtn skipped:  type rule in configuration
+	System.Windows.Controls.Button [PCOptimizer]System.Windows.Controls.Button PCOptimizer.Views.MouseKeyboardPage::ImportConfigBtn skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.OptimizerPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::OptimizerPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::AppendLog[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::LowCard_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::MidCard_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::HighCard_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::LowRadio_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::MidRadio_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::HighRadio_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::UpdateCardSelectionVisuals[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::ApplyBoostBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Views.OptimizerPage::_optimizerEngine skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::PageHeader skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::PageSubtitle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::ProfileTitle skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.Views.OptimizerPage::LowCard skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.OptimizerPage::LowRadio skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::LowTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::LowDescText skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.Views.OptimizerPage::MidCard skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.OptimizerPage::MidRadio skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::MidTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::MidDescText skipped:  type rule in configuration
+	System.Windows.Controls.Border [PCOptimizer]System.Windows.Controls.Border PCOptimizer.Views.OptimizerPage::HighCard skipped:  type rule in configuration
+	System.Windows.Controls.RadioButton [PCOptimizer]System.Windows.Controls.RadioButton PCOptimizer.Views.OptimizerPage::HighRadio skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::HighTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::HighDescText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::ExtraTitleText skipped:  type rule in configuration
+	System.Windows.Controls.CheckBox [PCOptimizer]System.Windows.Controls.CheckBox PCOptimizer.Views.OptimizerPage::NetworkChk skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::NetTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::NetDescText skipped:  type rule in configuration
+	System.Windows.Controls.CheckBox [PCOptimizer]System.Windows.Controls.CheckBox PCOptimizer.Views.OptimizerPage::TrimChk skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::TrimTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::TrimDescText skipped:  type rule in configuration
+	System.Windows.Controls.CheckBox [PCOptimizer]System.Windows.Controls.CheckBox PCOptimizer.Views.OptimizerPage::DeepJunkChk skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::JunkTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::JunkDescText skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.OptimizerPage::ApplyBoostBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.OptimizerPage::LogTitleText skipped:  type rule in configuration
+	System.Windows.Controls.ScrollViewer [PCOptimizer]System.Windows.Controls.ScrollViewer PCOptimizer.Views.OptimizerPage::LogScroll skipped:  type rule in configuration
+	System.Windows.Controls.TextBox [PCOptimizer]System.Windows.Controls.TextBox PCOptimizer.Views.OptimizerPage::LogBox skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.OptimizerPage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.ProfilePage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::LoadProfileData[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::FormatKeyHeader[1]( [System.Runtime]System.String ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::StartCountdown[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::CountdownTimer_Tick[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::ProfilePage_Unloaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::CopyHwid_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.ProfilePage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	System.Windows.Threading.DispatcherTimer [PCOptimizer]System.Windows.Threading.DispatcherTimer PCOptimizer.Views.ProfilePage::_countdownTimer skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::PageTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::PageSubtitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::LicenseKeyHeaderTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ActiveLicenseBadgeTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::AccountTypeLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::AccountTypeValue skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ServerStatusLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ServerStatusValue skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ActiveDurationLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ActiveDurationTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::SubSysInfoTitle skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::LicenseDetailsHeader skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::LicenseCodeLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::LicenseKeyTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ExpiryDateLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ExpiryTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::VerificationStatusLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::VerificationStatusValue skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::DeviceDetailsHeader skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::HwidLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::HwidTxt skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.ProfilePage::CopyHwidBtn skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::ComputerNameLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::PcNameTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::LocalIpLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::IpAddressTxt skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::OsInfoHeader skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::OsVersionLabel skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.ProfilePage::OsVersionTxt skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.ProfilePage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.StartupPage skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.StartupPage::InitializeComponent[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.StartupPage::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.StartupPage::StartupPage_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.StartupPage::ApplyLanguageTranslations[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.StartupPage::RefreshStartupList[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.StartupPage::RefreshBtn_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.StartupPage::StartupToggle_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.StartupPage::StartupToggle_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.StartupPage::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.StartupPage::System.Windows.Markup.IStyleConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Services.OptimizerEngine [PCOptimizer]PCOptimizer.Services.OptimizerEngine PCOptimizer.Views.StartupPage::_optimizerEngine skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.StartupPage::_isUpdatingList skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.StartupPage::PageTitleText skipped:  type rule in configuration
+	System.Windows.Controls.TextBlock [PCOptimizer]System.Windows.Controls.TextBlock PCOptimizer.Views.StartupPage::PageSubtitleText skipped:  type rule in configuration
+	System.Windows.Controls.ListView [PCOptimizer]System.Windows.Controls.ListView PCOptimizer.Views.StartupPage::StartupListView skipped:  type rule in configuration
+	Wpf.Ui.Controls.Button [PCOptimizer]Wpf.Ui.Controls.Button PCOptimizer.Views.StartupPage::RefreshBtn skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.StartupPage::_contentLoaded skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Services.api skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.api::get_name[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.api::get_ownerid[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.api::get_version[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.api::get_sessionid[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.api::.ctor[4]( [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Services.api::init[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.api::license[2]( [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.api::.cctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::<name>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::<ownerid>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::<version>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::_sessionId skipped:  attribute
+	System.Net.Http.HttpClient [PCOptimizer]System.Net.Http.HttpClient PCOptimizer.Services.api::_client skipped:  attribute
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::name skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::ownerid skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::version skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api::sessionid skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.KeyAuthResponse skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::get_success[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::set_success[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::get_sessionid[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::set_sessionid[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::get_message[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::set_message[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::get_info[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::set_info[1]( [PCOptimizer]PCOptimizer.Services.UserData ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthResponse::.ctor[0]( ) skipped:  special name
+
+
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.KeyAuthResponse::<success>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthResponse::<sessionid>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthResponse::<message>k__BackingField skipped:  attribute
+	PCOptimizer.Services.UserData [PCOptimizer]PCOptimizer.Services.UserData PCOptimizer.Services.KeyAuthResponse::<info>k__BackingField skipped:  attribute
+
+
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.KeyAuthResponse::success skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthResponse::sessionid skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthResponse::message skipped:  attribute
+	PCOptimizer.Services.UserData [PCOptimizer]PCOptimizer.Services.UserData PCOptimizer.Services.KeyAuthResponse::info skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.UserData skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.UserData::get_username[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::set_username[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::get_hwid[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::set_hwid[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::get_subscriptions[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::set_subscriptions[1]( [System.Collections]System.Collections.Generic.List`1<[PCOptimizer]PCOptimizer.Services.SubscriptionData> ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::get_ip[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::set_ip[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.UserData::.ctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.UserData::<username>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.UserData::<hwid>k__BackingField skipped:  attribute
+	System.Collections.Generic.List`1<PCOptimizer.Services.SubscriptionData> [PCOptimizer]System.Collections.Generic.List`1<PCOptimizer.Services.SubscriptionData> PCOptimizer.Services.UserData::<subscriptions>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.UserData::<ip>k__BackingField skipped:  attribute
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.UserData::username skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.UserData::hwid skipped:  attribute
+	System.Collections.Generic.List`1<PCOptimizer.Services.SubscriptionData> [PCOptimizer]System.Collections.Generic.List`1<PCOptimizer.Services.SubscriptionData> PCOptimizer.Services.UserData::subscriptions skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.UserData::ip skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.SubscriptionData skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.SubscriptionData::get_subscription[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.SubscriptionData::set_subscription[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.SubscriptionData::get_expiry[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.SubscriptionData::set_expiry[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.SubscriptionData::get_timeleft[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.SubscriptionData::set_timeleft[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.SubscriptionData::.ctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.SubscriptionData::<subscription>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.SubscriptionData::<expiry>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.SubscriptionData::<timeleft>k__BackingField skipped:  attribute
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.SubscriptionData::subscription skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.SubscriptionData::expiry skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.SubscriptionData::timeleft skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.LicenseInfo skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::get_Key[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::set_Key[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::get_Expiry[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::set_Expiry[1]( [System.Runtime]System.DateTime ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::get_HWID[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::set_HWID[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::get_IP[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::set_IP[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::get_PCName[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::set_PCName[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::get_Duration[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.LicenseInfo::.ctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::<Key>k__BackingField skipped:  attribute
+	System.DateTime [PCOptimizer]System.DateTime PCOptimizer.Services.LicenseInfo::<Expiry>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::<HWID>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::<IP>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::<PCName>k__BackingField skipped:  attribute
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::Key skipped:  attribute
+	System.DateTime [PCOptimizer]System.DateTime PCOptimizer.Services.LicenseInfo::Expiry skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::HWID skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::IP skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.LicenseInfo::PCName skipped:  attribute
+	System.TimeSpan [PCOptimizer]System.TimeSpan PCOptimizer.Services.LicenseInfo::Duration skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.KeyAuthService skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::get_CurrentLicense[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::set_CurrentLicense[1]( [PCOptimizer]PCOptimizer.Services.LicenseInfo ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::get_LastErrorMessage[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::set_LastErrorMessage[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::Decrypt[2]( [System.Runtime]System.Byte[], [System.Runtime]System.Byte ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::.cctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::InitializeAsync[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::LoginAsync[1]( [System.Runtime]System.String ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::GetMachineGuid[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::GetCurrentHWID[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::VerifyLicense[1]( [System.Runtime]System.String& ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService::GetLocalIP[0]( ) skipped:  attribute
+
+
+	PCOptimizer.Services.api [PCOptimizer]PCOptimizer.Services.api PCOptimizer.Services.KeyAuthService::KeyAuthApp skipped:  attribute
+	PCOptimizer.Services.LicenseInfo [PCOptimizer]PCOptimizer.Services.LicenseInfo PCOptimizer.Services.KeyAuthService::<CurrentLicense>k__BackingField skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthService::<LastErrorMessage>k__BackingField skipped:  attribute
+
+
+	PCOptimizer.Services.LicenseInfo [PCOptimizer]PCOptimizer.Services.LicenseInfo PCOptimizer.Services.KeyAuthService::CurrentLicense skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthService::LastErrorMessage skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.SecurityGuard skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::IsDebuggerPresent[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::CheckRemoteDebuggerPresent[2]( [System.Runtime]System.IntPtr, [System.Runtime]System.Boolean& ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::GetCurrentThread[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::NtSetInformationThread[4]( [System.Runtime]System.IntPtr, [System.Runtime]System.Int32, [System.Runtime]System.IntPtr, [System.Runtime]System.Int32 ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::GetWindowText[3]( [System.Runtime]System.IntPtr, [System.Runtime]System.Text.StringBuilder, [System.Runtime]System.Int32 ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::GetWindowTextLength[1]( [System.Runtime]System.IntPtr ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::EnumWindows[2]( [PCOptimizer]PCOptimizer.Services.SecurityGuard/EnumWindowsProc, [System.Runtime]System.IntPtr ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::Initialize[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::HideCurrentThread[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::CheckDebuggers[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::StartSecurityMonitor[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::SecurityLoop[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::ScanLoadedModules[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::ScanWindowTitles[0]( ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::ExitForSecurity[1]( [System.Runtime]System.String ) skipped:  attribute
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard::.cctor[0]( ) skipped:  special name
+
+
+	System.Threading.Thread [PCOptimizer]System.Threading.Thread PCOptimizer.Services.SecurityGuard::_securityThread skipped:  attribute
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Services.SecurityGuard::_isRunning skipped:  attribute
+	System.String[] [PCOptimizer]System.String[] PCOptimizer.Services.SecurityGuard::BannedProcesses skipped:  attribute
+	System.String[] [PCOptimizer]System.String[] PCOptimizer.Services.SecurityGuard::BannedWindowTitles skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Models.DriverInfo skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_Name[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::set_Name[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_Manufacturer[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::set_Manufacturer[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_Version[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::set_Version[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_DeviceClass[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::set_DeviceClass[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_DeviceId[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::set_DeviceId[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_Status[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::set_Status[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_DriverDate[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::set_DriverDate[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_StatusColor[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::get_StatusText[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.DriverInfo::.ctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::<Name>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::<Manufacturer>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::<Version>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::<DeviceClass>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::<DeviceId>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::<Status>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::<DriverDate>k__BackingField skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::Name skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::Manufacturer skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::Version skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::DeviceClass skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::DeviceId skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::Status skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::DriverDate skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::StatusColor skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.DriverInfo::StatusText skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Models.GameItem skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_Name[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_Name[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_ExecutableName[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_ExecutableName[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_FilePath[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_FilePath[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_Launcher[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_Launcher[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_IsRunning[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_IsRunning[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_LastBoosted[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_LastBoosted[1]( [System.Runtime]System.Nullable`1<[System.Runtime]System.DateTime> ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_AutoBoostEnabled[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_AutoBoostEnabled[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_CoverImagePath[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_CoverImagePath[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_IsBestPerformanceApplied[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_IsBestPerformanceApplied[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_IsLiteModeApplied[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_IsLiteModeApplied[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_WarningText[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_WarningText[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_GameSettingsAppliedText[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_GameSettingsAppliedText[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_IsGameSettingsApplied[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_IsGameSettingsApplied[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_FpsBoostStatus[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_PingOptimization[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_PerformanceIndicator[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_PerformanceIndicator[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_IsOptimized[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::set_IsOptimized[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_StatusText[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_StatusColor[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::get_LastBoostedText[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.GameItem::.ctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<Name>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<ExecutableName>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<FilePath>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<Launcher>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::<IsRunning>k__BackingField skipped:  type rule in configuration
+	System.Nullable`1<System.DateTime> [PCOptimizer]System.Nullable`1<System.DateTime> PCOptimizer.Models.GameItem::<LastBoosted>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::<AutoBoostEnabled>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<CoverImagePath>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::<IsBestPerformanceApplied>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::<IsLiteModeApplied>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<WarningText>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<GameSettingsAppliedText>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::<IsGameSettingsApplied>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::<PerformanceIndicator>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::<IsOptimized>k__BackingField skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::Name skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::ExecutableName skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::FilePath skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::Launcher skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::IsRunning skipped:  type rule in configuration
+	System.Nullable`1<System.DateTime> [PCOptimizer]System.Nullable`1<System.DateTime> PCOptimizer.Models.GameItem::LastBoosted skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::AutoBoostEnabled skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::CoverImagePath skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::IsBestPerformanceApplied skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::IsLiteModeApplied skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::WarningText skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::GameSettingsAppliedText skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::IsGameSettingsApplied skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::FpsBoostStatus skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::PingOptimization skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::PerformanceIndicator skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.GameItem::IsOptimized skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::StatusText skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::StatusColor skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.GameItem::LastBoostedText skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Models.StartupItem skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_Name[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::set_Name[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_Command[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::set_Command[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_FilePath[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::set_FilePath[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_RegistryPath[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::set_RegistryPath[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_IsEnabled[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::set_IsEnabled[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_RegistryHive[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::set_RegistryHive[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_Impact[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::set_Impact[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_ImpactColor[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_EnabledText[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::get_LocalizedImpact[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.StartupItem::.ctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::<Name>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::<Command>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::<FilePath>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::<RegistryPath>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.StartupItem::<IsEnabled>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::<RegistryHive>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::<Impact>k__BackingField skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::Name skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::Command skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::FilePath skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::RegistryPath skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.StartupItem::IsEnabled skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::RegistryHive skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::Impact skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::ImpactColor skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::EnabledText skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.StartupItem::LocalizedImpact skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Models.TweakItem skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_Id[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_Id[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_Name[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_Name[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_Subtitle[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_Subtitle[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_Description[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_Description[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_SizeText[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_SizeText[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_Category[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_Category[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_SubCategory[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_SubCategory[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_IsActive[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_IsActive[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_IsRecommended[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_IsRecommended[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_HasDetails[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_HasDetails[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_Icon[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_Icon[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_Status[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_Status[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::get_PerformanceEstimate[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::set_PerformanceEstimate[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Models.TweakItem::.ctor[0]( ) skipped:  special name
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<Id>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<Name>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<Subtitle>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<Description>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<SizeText>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<Category>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<SubCategory>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.TweakItem::<IsActive>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.TweakItem::<IsRecommended>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.TweakItem::<HasDetails>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<Icon>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<Status>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::<PerformanceEstimate>k__BackingField skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::Id skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::Name skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::Subtitle skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::Description skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::SizeText skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::Category skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::SubCategory skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.TweakItem::IsActive skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.TweakItem::IsRecommended skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Models.TweakItem::HasDetails skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::Icon skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::Status skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Models.TweakItem::PerformanceEstimate skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.MainWindow/<>c__DisplayClass7_0 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.MainWindow/<>c__DisplayClass7_0::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.MainWindow/<>c__DisplayClass7_0::<ShowToast>b__0[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow/<>c__DisplayClass7_0::<ShowToast>b__1[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow/<>c__DisplayClass7_0::<ShowToast>b__2[1]( [System.Runtime]System.Threading.Tasks.Task ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow/<>c__DisplayClass7_0::<ShowToast>b__3[0]( ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.MainWindow/<>c__DisplayClass7_0::<ShowToast>b__4[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) skipped:  type rule in configuration
+
+
+	PCOptimizer.MainWindow [PCOptimizer]PCOptimizer.MainWindow PCOptimizer.MainWindow/<>c__DisplayClass7_0::<>4__this skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.MainWindow/<>c__DisplayClass7_0::title skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.MainWindow/<>c__DisplayClass7_0::message skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.MainWindow/<>c__DisplayClass7_0::isSuccess skipped:  type rule in configuration
+	System.EventHandler [PCOptimizer]System.EventHandler PCOptimizer.MainWindow/<>c__DisplayClass7_0::<>9__4 skipped:  type rule in configuration
+	System.Action [PCOptimizer]System.Action PCOptimizer.MainWindow/<>c__DisplayClass7_0::<>9__3 skipped:  type rule in configuration
+	System.Action`1<System.Threading.Tasks.Task> [PCOptimizer]System.Action`1<System.Threading.Tasks.Task> PCOptimizer.MainWindow/<>c__DisplayClass7_0::<>9__2 skipped:  type rule in configuration
+	System.EventHandler [PCOptimizer]System.EventHandler PCOptimizer.MainWindow/<>c__DisplayClass7_0::<>9__1 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c::.cctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c::<FilterAndBindTweaks>b__17_2[1]( [PCOptimizer]PCOptimizer.Models.TweakItem ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c::<FilterAndBindTweaks>b__17_3[1]( [PCOptimizer]PCOptimizer.Models.TweakItem ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Views.DashboardPage/<>c [PCOptimizer]PCOptimizer.Views.DashboardPage/<>c PCOptimizer.Views.DashboardPage/<>c::<>9 skipped:  type rule in configuration
+	System.Func`2<PCOptimizer.Models.TweakItem,System.Boolean> [PCOptimizer]System.Func`2<PCOptimizer.Models.TweakItem,System.Boolean> PCOptimizer.Views.DashboardPage/<>c::<>9__17_2 skipped:  type rule in configuration
+	System.Func`2<PCOptimizer.Models.TweakItem,System.Boolean> [PCOptimizer]System.Func`2<PCOptimizer.Models.TweakItem,System.Boolean> PCOptimizer.Views.DashboardPage/<>c::<>9__17_3 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass17_0 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass17_0::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass17_0::<FilterAndBindTweaks>b__0[1]( [PCOptimizer]PCOptimizer.Models.TweakItem ) skipped:  type rule in configuration
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass17_0::<FilterAndBindTweaks>b__1[1]( [PCOptimizer]PCOptimizer.Models.TweakItem ) skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Views.DashboardPage/<>c__DisplayClass17_0::searchQuery skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.DashboardPage/<>c__DisplayClass17_0::category skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass18_0 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass18_0::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass18_0::<SelectTweak>b__0[1]( [PCOptimizer]PCOptimizer.Models.TweakItem ) skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Views.DashboardPage/<>c__DisplayClass18_0::id skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass23_0 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass23_0::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<>c__DisplayClass23_0::<CleanDiscordFolderAsync>b__0[0]( ) skipped:  type rule in configuration
+
+
+	System.String [PCOptimizer]System.String PCOptimizer.Views.DashboardPage/<>c__DisplayClass23_0::subFolder skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::<>1__state skipped:  type rule in configuration
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncVoidMethodBuilder PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::<>t__builder skipped:  type rule in configuration
+	PCOptimizer.Views.DashboardPage [PCOptimizer]PCOptimizer.Views.DashboardPage PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::<>4__this skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32> PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::<>u__1 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int64> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int64> PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::<>u__2 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Views.DashboardPage/<BulkBtn_Click>d__24::<>u__3 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage/<CleanDiscordFolderAsync>d__23 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<CleanDiscordFolderAsync>d__23::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<CleanDiscordFolderAsync>d__23::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.DashboardPage/<CleanDiscordFolderAsync>d__23::<>1__state skipped:  type rule in configuration
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder PCOptimizer.Views.DashboardPage/<CleanDiscordFolderAsync>d__23::<>t__builder skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.DashboardPage/<CleanDiscordFolderAsync>d__23::subFolder skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Views.DashboardPage/<CleanDiscordFolderAsync>d__23::<>u__1 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<>1__state skipped:  type rule in configuration
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncVoidMethodBuilder PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<>t__builder skipped:  type rule in configuration
+	PCOptimizer.Views.DashboardPage [PCOptimizer]PCOptimizer.Views.DashboardPage PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<>4__this skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<id>5__2 skipped:  type rule in configuration
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<i>5__3 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<>u__1 skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<dnsProvider>5__4 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32> PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<>u__2 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int64> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int64> PCOptimizer.Views.DashboardPage/<ExecuteSelectedTweak>d__22::<>u__3 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DriversPage/<>c__DisplayClass3_0 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DriversPage/<>c__DisplayClass3_0::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.DriversPage/<>c__DisplayClass3_0::<LoadDriversAsync>b__1[0]( ) skipped:  type rule in configuration
+
+
+	System.Collections.Generic.List`1<PCOptimizer.Models.DriverInfo> [PCOptimizer]System.Collections.Generic.List`1<PCOptimizer.Models.DriverInfo> PCOptimizer.Views.DriversPage/<>c__DisplayClass3_0::drivers skipped:  type rule in configuration
+	PCOptimizer.Views.DriversPage [PCOptimizer]PCOptimizer.Views.DriversPage PCOptimizer.Views.DriversPage/<>c__DisplayClass3_0::<>4__this skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.DriversPage/<LoadDriversAsync>d__3 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.DriversPage/<LoadDriversAsync>d__3::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.DriversPage/<LoadDriversAsync>d__3::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.DriversPage/<LoadDriversAsync>d__3::<>1__state skipped:  type rule in configuration
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncVoidMethodBuilder PCOptimizer.Views.DriversPage/<LoadDriversAsync>d__3::<>t__builder skipped:  type rule in configuration
+	PCOptimizer.Views.DriversPage [PCOptimizer]PCOptimizer.Views.DriversPage PCOptimizer.Views.DriversPage/<LoadDriversAsync>d__3::<>4__this skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Views.DriversPage/<LoadDriversAsync>d__3::<>u__1 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::<>1__state skipped:  type rule in configuration
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncVoidMethodBuilder PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::<>t__builder skipped:  type rule in configuration
+	PCOptimizer.Views.LoadingWindow [PCOptimizer]PCOptimizer.Views.LoadingWindow PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::<>4__this skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::<initSuccess>5__2 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::<>u__1 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> PCOptimizer.Views.LoadingWindow/<StartLoadingSequence>d__15::<>u__2 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.LoginWindow/<LoginButton_Click>d__4 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.LoginWindow/<LoginButton_Click>d__4::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.LoginWindow/<LoginButton_Click>d__4::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.LoginWindow/<LoginButton_Click>d__4::<>1__state skipped:  type rule in configuration
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncVoidMethodBuilder PCOptimizer.Views.LoginWindow/<LoginButton_Click>d__4::<>t__builder skipped:  type rule in configuration
+	PCOptimizer.Views.LoginWindow [PCOptimizer]PCOptimizer.Views.LoginWindow PCOptimizer.Views.LoginWindow/<LoginButton_Click>d__4::<>4__this skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> PCOptimizer.Views.LoginWindow/<LoginButton_Click>d__4::<>u__1 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_MouseAimStabilizer[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_MouseAimStabilizer[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_KeyboardLatencyReducer[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_KeyboardLatencyReducer[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_UsbSelectiveSuspend[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_UsbSelectiveSuspend[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_UsbPollingRatePriority[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_UsbPollingRatePriority[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_PointerSpeed[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_PointerSpeed[1]( [System.Runtime]System.Int32 ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_SensiX[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_SensiX[1]( [System.Runtime]System.Double ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_SensiY[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_SensiY[1]( [System.Runtime]System.Double ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_Dpi[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_Dpi[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_Hz[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_Hz[1]( [System.Runtime]System.String ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::get_AutoSave[0]( ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::set_AutoSave[1]( [System.Runtime]System.Boolean ) skipped:  skip by property
+	[PCOptimizer]PCOptimizer.Views.MouseKeyboardPage/PageConfig::.ctor[0]( ) skipped:  special name
+
+
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::<MouseAimStabilizer>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::<KeyboardLatencyReducer>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::<UsbSelectiveSuspend>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::<UsbPollingRatePriority>k__BackingField skipped:  type rule in configuration
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.MouseKeyboardPage/PageConfig::<PointerSpeed>k__BackingField skipped:  type rule in configuration
+	System.Double [PCOptimizer]System.Double PCOptimizer.Views.MouseKeyboardPage/PageConfig::<SensiX>k__BackingField skipped:  type rule in configuration
+	System.Double [PCOptimizer]System.Double PCOptimizer.Views.MouseKeyboardPage/PageConfig::<SensiY>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.MouseKeyboardPage/PageConfig::<Dpi>k__BackingField skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.MouseKeyboardPage/PageConfig::<Hz>k__BackingField skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::<AutoSave>k__BackingField skipped:  type rule in configuration
+
+
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::MouseAimStabilizer skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::KeyboardLatencyReducer skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::UsbSelectiveSuspend skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::UsbPollingRatePriority skipped:  type rule in configuration
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.MouseKeyboardPage/PageConfig::PointerSpeed skipped:  type rule in configuration
+	System.Double [PCOptimizer]System.Double PCOptimizer.Views.MouseKeyboardPage/PageConfig::SensiX skipped:  type rule in configuration
+	System.Double [PCOptimizer]System.Double PCOptimizer.Views.MouseKeyboardPage/PageConfig::SensiY skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.MouseKeyboardPage/PageConfig::Dpi skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.MouseKeyboardPage/PageConfig::Hz skipped:  type rule in configuration
+	System.Boolean [PCOptimizer]System.Boolean PCOptimizer.Views.MouseKeyboardPage/PageConfig::AutoSave skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.OptimizerPage/<>c__DisplayClass4_0 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage/<>c__DisplayClass4_0::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage/<>c__DisplayClass4_0::<AppendLog>b__0[0]( ) skipped:  type rule in configuration
+
+
+	PCOptimizer.Views.OptimizerPage [PCOptimizer]PCOptimizer.Views.OptimizerPage PCOptimizer.Views.OptimizerPage/<>c__DisplayClass4_0::<>4__this skipped:  type rule in configuration
+	System.String [PCOptimizer]System.String PCOptimizer.Views.OptimizerPage/<>c__DisplayClass4_0::message skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12 skipped:  namespace rule in configuration
+{
+
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::<>1__state skipped:  type rule in configuration
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [PCOptimizer]System.Runtime.CompilerServices.AsyncVoidMethodBuilder PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::<>t__builder skipped:  type rule in configuration
+	PCOptimizer.Views.OptimizerPage [PCOptimizer]PCOptimizer.Views.OptimizerPage PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::<>4__this skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::<>u__1 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32> PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::<>u__2 skipped:  type rule in configuration
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Int64> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Int64> PCOptimizer.Views.OptimizerPage/<ApplyBoostBtn_Click>d__12::<>u__3 skipped:  type rule in configuration
+}
+
+[PCOptimizer]PCOptimizer.Services.api/<init>d__14 skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.api/<init>d__14::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.api/<init>d__14::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.api/<init>d__14::<>1__state skipped:  attribute
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<PCOptimizer.Services.KeyAuthResponse> [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<PCOptimizer.Services.KeyAuthResponse> PCOptimizer.Services.api/<init>d__14::<>t__builder skipped:  attribute
+	PCOptimizer.Services.api [PCOptimizer]PCOptimizer.Services.api PCOptimizer.Services.api/<init>d__14::<>4__this skipped:  attribute
+	System.Net.Http.HttpResponseMessage [PCOptimizer]System.Net.Http.HttpResponseMessage PCOptimizer.Services.api/<init>d__14::<response>5__2 skipped:  attribute
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> PCOptimizer.Services.api/<init>d__14::<>u__1 skipped:  attribute
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> PCOptimizer.Services.api/<init>d__14::<>u__2 skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.api/<license>d__15 skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.api/<license>d__15::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.api/<license>d__15::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.api/<license>d__15::<>1__state skipped:  attribute
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<PCOptimizer.Services.KeyAuthResponse> [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<PCOptimizer.Services.KeyAuthResponse> PCOptimizer.Services.api/<license>d__15::<>t__builder skipped:  attribute
+	PCOptimizer.Services.api [PCOptimizer]PCOptimizer.Services.api PCOptimizer.Services.api/<license>d__15::<>4__this skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api/<license>d__15::key skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.api/<license>d__15::hwid skipped:  attribute
+	System.Net.Http.HttpResponseMessage [PCOptimizer]System.Net.Http.HttpResponseMessage PCOptimizer.Services.api/<license>d__15::<response>5__2 skipped:  attribute
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.Net.Http.HttpResponseMessage> PCOptimizer.Services.api/<license>d__15::<>u__1 skipped:  attribute
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.String> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<System.String> PCOptimizer.Services.api/<license>d__15::<>u__2 skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.KeyAuthService/<>c skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService/<>c::.cctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService/<>c::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService/<>c::<GetLocalIP>b__16_0[1]( [System.Net.Primitives]System.Net.IPAddress ) skipped:  attribute
+
+
+	PCOptimizer.Services.KeyAuthService/<>c [PCOptimizer]PCOptimizer.Services.KeyAuthService/<>c PCOptimizer.Services.KeyAuthService/<>c::<>9 skipped:  attribute
+	System.Func`2<System.Net.IPAddress,System.Boolean> [PCOptimizer]System.Func`2<System.Net.IPAddress,System.Boolean> PCOptimizer.Services.KeyAuthService/<>c::<>9__16_0 skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.KeyAuthService/<InitializeAsync>d__11 skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService/<InitializeAsync>d__11::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService/<InitializeAsync>d__11::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.KeyAuthService/<InitializeAsync>d__11::<>1__state skipped:  attribute
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> PCOptimizer.Services.KeyAuthService/<InitializeAsync>d__11::<>t__builder skipped:  attribute
+	System.Runtime.CompilerServices.TaskAwaiter`1<PCOptimizer.Services.KeyAuthResponse> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<PCOptimizer.Services.KeyAuthResponse> PCOptimizer.Services.KeyAuthService/<InitializeAsync>d__11::<>u__1 skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12 skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12::MoveNext[0]( ) skipped:  external base class or interface
+	[PCOptimizer]PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+
+
+	System.Int32 [PCOptimizer]System.Int32 PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12::<>1__state skipped:  attribute
+	System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> [PCOptimizer]System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Boolean> PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12::<>t__builder skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12::licenseKey skipped:  attribute
+	System.String [PCOptimizer]System.String PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12::<hwid>5__2 skipped:  attribute
+	System.Runtime.CompilerServices.TaskAwaiter`1<PCOptimizer.Services.KeyAuthResponse> [PCOptimizer]System.Runtime.CompilerServices.TaskAwaiter`1<PCOptimizer.Services.KeyAuthResponse> PCOptimizer.Services.KeyAuthService/<LoginAsync>d__12::<>u__1 skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.SecurityGuard/<>O skipped:  attribute
+{
+
+	System.Threading.ThreadStart [PCOptimizer]System.Threading.ThreadStart PCOptimizer.Services.SecurityGuard/<>O::<0>__SecurityLoop skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.SecurityGuard/<>c skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard/<>c::.cctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard/<>c::.ctor[0]( ) skipped:  special name
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard/<>c::<ScanWindowTitles>b__18_0[2]( [System.Runtime]System.IntPtr, [System.Runtime]System.IntPtr ) skipped:  attribute
+
+
+	PCOptimizer.Services.SecurityGuard/<>c [PCOptimizer]PCOptimizer.Services.SecurityGuard/<>c PCOptimizer.Services.SecurityGuard/<>c::<>9 skipped:  attribute
+	PCOptimizer.Services.SecurityGuard/EnumWindowsProc [PCOptimizer]PCOptimizer.Services.SecurityGuard/EnumWindowsProc PCOptimizer.Services.SecurityGuard/<>c::<>9__18_0 skipped:  attribute
+}
+
+[PCOptimizer]PCOptimizer.Services.SecurityGuard/EnumWindowsProc skipped:  attribute
+{
+
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard/EnumWindowsProc::.ctor[2]( [System.Runtime]System.Object, [System.Runtime]System.IntPtr ) skipped:  runtime method
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard/EnumWindowsProc::Invoke[2]( [System.Runtime]System.IntPtr, [System.Runtime]System.IntPtr ) skipped:  runtime method
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard/EnumWindowsProc::BeginInvoke[4]( [System.Runtime]System.IntPtr, [System.Runtime]System.IntPtr, [System.Runtime]System.AsyncCallback, [System.Runtime]System.Object ) skipped:  runtime method
+	[PCOptimizer]PCOptimizer.Services.SecurityGuard/EnumWindowsProc::EndInvoke[1]( [System.Runtime]System.IAsyncResult ) skipped:  runtime method
+}
+
+Renamed Resources:
+
+
+Skipped Resources:
+
+PCOptimizer.g.resources (no clear new name)

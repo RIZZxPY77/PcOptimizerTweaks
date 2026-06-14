@@ -1,0 +1,14 @@
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\PCOptimizer.exe
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\PCOptimizer.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\PCOptimizer.runtimeconfig.json
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\PCOptimizer.pdb
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\LiveCharts.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\LiveCharts.Wpf.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\MaterialDesignColors.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\MaterialDesignThemes.Wpf.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\System.CodeDom.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\System.Management.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\Wpf.Ui.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\Wpf.Ui.Abstractions.dll
+C:\Users\Administrator\Documents\optimize\PCOptimizer\publish\PCOptimizer.deps.json

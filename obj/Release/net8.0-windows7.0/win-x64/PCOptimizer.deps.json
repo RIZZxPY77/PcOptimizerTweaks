@@ -1,0 +1,178 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {},
+    ".NETCoreApp,Version=v8.0/win-x64": {
+      "PCOptimizer/1.0.0": {
+        "dependencies": {
+          "LiveCharts.Wpf": "0.9.7",
+          "MaterialDesignThemes": "4.2.1",
+          "Newtonsoft.Json": "13.0.3",
+          "System.Management": "10.0.8",
+          "WPF-UI": "4.3.0"
+        },
+        "runtime": {
+          "PCOptimizer.dll": {}
+        }
+      },
+      "LiveCharts/0.9.7": {
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {
+            "assemblyVersion": "0.9.7.0",
+            "fileVersion": "0.9.7.0"
+          }
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {
+            "assemblyVersion": "0.9.7.0",
+            "fileVersion": "0.9.7.0"
+          }
+        }
+      },
+      "MaterialDesignColors/2.0.3": {
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {
+            "assemblyVersion": "2.0.3.2",
+            "fileVersion": "2.0.3.2"
+          }
+        }
+      },
+      "MaterialDesignThemes/4.2.1": {
+        "dependencies": {
+          "MaterialDesignColors": "2.0.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "4.2.1.2",
+            "fileVersion": "4.2.1.2"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
+      "System.CodeDom/10.0.8": {
+        "runtime": {
+          "lib/net8.0/System.CodeDom.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.826.23019"
+          }
+        }
+      },
+      "System.Management/10.0.8": {
+        "dependencies": {
+          "System.CodeDom": "10.0.8"
+        },
+        "runtime": {
+          "runtimes/win/lib/net8.0/System.Management.dll": {
+            "assemblyVersion": "10.0.0.8",
+            "fileVersion": "10.0.826.23019"
+          }
+        }
+      },
+      "WPF-UI/4.3.0": {
+        "dependencies": {
+          "WPF-UI.Abstractions": "4.3.0"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Wpf.Ui.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      },
+      "WPF-UI.Abstractions/4.3.0": {
+        "runtime": {
+          "lib/net8.0/Wpf.Ui.Abstractions.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PCOptimizer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LiveCharts/0.9.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
+      "path": "livecharts/0.9.7",
+      "hashPath": "livecharts.0.9.7.nupkg.sha512"
+    },
+    "LiveCharts.Wpf/0.9.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
+      "path": "livecharts.wpf/0.9.7",
+      "hashPath": "livecharts.wpf.0.9.7.nupkg.sha512"
+    },
+    "MaterialDesignColors/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hn5GsMbmYet4WTVRNN01VGkPglWtytJt3oTTzjHjPSDtoF6ZVmfjj6R1EeNER2rlBtSNGuqB4GZmD6cnHL0f1A==",
+      "path": "materialdesigncolors/2.0.3",
+      "hashPath": "materialdesigncolors.2.0.3.nupkg.sha512"
+    },
+    "MaterialDesignThemes/4.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LsvOoXrEtOJib+kvBx3TIUN+zYexQcYiKGYoAXWMvfFTwiaELRWk89wny9sI4lPDqoJtIXVtoxo1oRDsLwy7NQ==",
+      "path": "materialdesignthemes/4.2.1",
+      "hashPath": "materialdesignthemes.4.2.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "System.CodeDom/10.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-23AxxQYf5rjSmsawFw8kCVLRvvCIKMCnZWnRzBcHkzwsBra5eTv4k88BV6fEN+f3FVHO7PneZj3LOEyQnnPhTA==",
+      "path": "system.codedom/10.0.8",
+      "hashPath": "system.codedom.10.0.8.nupkg.sha512"
+    },
+    "System.Management/10.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8GgwcQgAv1Xg0z4vkJ759AJOFbZpK17cX9+21SOHo+KXS+VUhwSBeFSzjDJyyaEiJwgQ0D5sGnfpEs2hjyZrmA==",
+      "path": "system.management/10.0.8",
+      "hashPath": "system.management.10.0.8.nupkg.sha512"
+    },
+    "WPF-UI/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SIHhc8lIrhEQ/1cLFZN6Dtf8cqsLm4myBULj9obnacd9TyDs2vizhKYzRzTlcPEcnzb3L4EstvPN3M6kcXbJCA==",
+      "path": "wpf-ui/4.3.0",
+      "hashPath": "wpf-ui.4.3.0.nupkg.sha512"
+    },
+    "WPF-UI.Abstractions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7Kj9DmCCo4SOCd1jAiw4+EcMFP2nR8rLLvitAYzVtzbWToTsodkbie24+8x9C4LDLxkopWEUGX62szqqNy7oeg==",
+      "path": "wpf-ui.abstractions/4.3.0",
+      "hashPath": "wpf-ui.abstractions.4.3.0.nupkg.sha512"
+    }
+  }
+}

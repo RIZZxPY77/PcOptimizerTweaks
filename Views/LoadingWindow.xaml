@@ -1,0 +1,48 @@
+<Window x:Class="PCOptimizer.Views.LoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Loading" Height="320" Width="480"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" 
+        ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="15" Background="#0A0D14" BorderBrush="#1F2840" BorderThickness="1" Effect="{DynamicResource DropShadow}">
+        <Border.Resources>
+            <DropShadowEffect x:Key="DropShadow" BlurRadius="20" ShadowDepth="0" Color="Black" Opacity="0.5"/>
+        </Border.Resources>
+        <Grid Margin="24">
+            
+            <!-- Language Selection View -->
+            <StackPanel x:Name="LanguageSelectionPanel" VerticalAlignment="Center" Visibility="Visible">
+                <TextBlock Text="PILIH BAHASA / SELECT LANGUAGE" FontSize="13" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,16"/>
+                <UniformGrid Columns="3" Rows="4" HorizontalAlignment="Center" Width="420">
+                    <Button x:Name="IndonesianBtn" Content="Bahasa Indonesia" Margin="4" Height="32" Style="{StaticResource ActionButtonStyle}" Click="IndonesianBtn_Click"/>
+                    <Button x:Name="EnglishBtn" Content="English" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="EnglishBtn_Click"/>
+                    <Button x:Name="SpanishBtn" Content="Español" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="SpanishBtn_Click"/>
+                    <Button x:Name="FrenchBtn" Content="Français" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="FrenchBtn_Click"/>
+                    <Button x:Name="GermanBtn" Content="Deutsch" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="GermanBtn_Click"/>
+                    <Button x:Name="RussianBtn" Content="Русский" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="RussianBtn_Click"/>
+                    <Button x:Name="PortugueseBtn" Content="Português" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="PortugueseBtn_Click"/>
+                    <Button x:Name="ChineseBtn" Content="简体中文" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="ChineseBtn_Click"/>
+                    <Button x:Name="JapaneseBtn" Content="日本語" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="JapaneseBtn_Click"/>
+                    <Button x:Name="KoreanBtn" Content="한국어" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="KoreanBtn_Click"/>
+                    <Button x:Name="TurkishBtn" Content="Türkçe" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="TurkishBtn_Click"/>
+                    <Button x:Name="ArabicBtn" Content="العربية" Margin="4" Height="32" Style="{StaticResource OutlineButtonStyle}" Click="ArabicBtn_Click"/>
+                </UniformGrid>
+            </StackPanel>
+            
+            <!-- Loading Progress View -->
+            <StackPanel x:Name="LoadingProgressPanel" VerticalAlignment="Center" Visibility="Collapsed">
+                <TextBlock x:Name="StatusTitleText" Text="OPTIMIZING SYSTEM" FontSize="16" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Name="StatusDescriptionText" Text="Menyiapkan sistem..." FontSize="12" Foreground="#8F9CAE" HorizontalAlignment="Center" Margin="0,6,0,20"/>
+                <ProgressBar IsIndeterminate="True" Width="360" Height="4" Background="#111625" BorderThickness="0">
+                    <ProgressBar.Foreground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FF9100" Offset="0"/>
+                            <GradientStop Color="#FFB300" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ProgressBar.Foreground>
+                </ProgressBar>
+            </StackPanel>
+            
+        </Grid>
+    </Border>
+</Window>

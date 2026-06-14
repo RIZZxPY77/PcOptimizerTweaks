@@ -1,0 +1,162 @@
+<Page x:Class="PCOptimizer.Views.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="About"
+      Background="#0A0D14">
+    
+    <Grid Margin="24,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock x:Name="PageTitleText" Text="Tentang CLAYX OPTIMIZER" Style="{StaticResource HeaderTextPageStyle}" />
+            <TextBlock x:Name="PageSubtitleText" Text="Informasi pengembang aplikasi, kontributor, dan visi tim CLAYX." Style="{StaticResource SubtitleTextPageStyle}" />
+        </StackPanel>
+
+        <!-- Developer Team Grid -->
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Card 1: Creator -->
+            <Border Grid.Column="0" Margin="0,0,6,0" Style="{StaticResource GlowCardStyle}" Padding="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                        <Border Width="36" Height="36" CornerRadius="18" Background="#261E12" BorderBrush="#FF9100" BorderThickness="1" Margin="0,0,12,0">
+                            <ui:SymbolIcon Symbol="Code24" Filled="True" FontSize="16" Foreground="#FF9100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="CreatorLabel" Text="Pembuat Utama" FontSize="10" FontWeight="Bold" Foreground="#FF9100"/>
+                            <TextBlock Text="RizzXiters" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <TextBlock x:Name="CreatorDesc" Grid.Row="1" Text="Pengembang inti yang mendesain seluruh arsitektur sistem optimasi, tuning memori, latensi, dan integrasi UI." FontSize="11.5" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                </Grid>
+            </Border>
+
+            <!-- Card 2: Founder & Dev Brain -->
+            <Border Grid.Column="1" Margin="6,0,6,0" Style="{StaticResource GlowCardStyle}" Padding="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                        <Border Width="36" Height="36" CornerRadius="18" Background="#122A2E" BorderBrush="#00F2FE" BorderThickness="1" Margin="0,0,12,0">
+                            <ui:SymbolIcon Symbol="PersonSupport24" Filled="True" FontSize="16" Foreground="#00F2FE" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="FounderLabel" Text="Founder &amp; Brain Dev" FontSize="10" FontWeight="Bold" Foreground="#00F2FE"/>
+                            <TextBlock Text="Nixkanaeru" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <TextBlock x:Name="FounderDesc" Grid.Row="1" Text="Merupakan founder, otak dari pengembangan tim, serta pendukung utama seluruh infrastruktur developer Clayx Team." FontSize="11.5" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                </Grid>
+            </Border>
+
+            <!-- Card 3: Sales & Market -->
+            <Border Grid.Column="2" Margin="6,0,6,0" Style="{StaticResource GlowCardStyle}" Padding="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                        <Border Width="36" Height="36" CornerRadius="18" Background="#1D2A44" BorderBrush="#8F9CAE" BorderThickness="1" Margin="0,0,12,0">
+                            <ui:SymbolIcon Symbol="People24" Filled="True" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="SalesLabel" Text="Sales &amp; Market Support" FontSize="10" FontWeight="Bold" Foreground="#8F9CAE"/>
+                            <TextBlock Text="Kiroru &amp; Zhey" FontSize="15" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <TextBlock x:Name="SalesDesc" Grid.Row="1" Text="Bertindak sebagai pembantu sekaligus support utama dalam penjualan, pemasaran (market), serta distribusi lisensi premium ke publik." FontSize="11.5" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                </Grid>
+            </Border>
+
+            <!-- Card 4: Creator Promotion -->
+            <Border Grid.Column="3" Margin="6,0,0,0" Style="{StaticResource GlowCardStyle}" Padding="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+                        <Border Width="36" Height="36" CornerRadius="18" Background="#261225" BorderBrush="#E040FB" BorderThickness="1" Margin="0,0,12,0">
+                            <ui:SymbolIcon Symbol="Speaker24" Filled="True" FontSize="16" Foreground="#E040FB" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="PromotionLabel" Text="Creator Promotion" FontSize="10" FontWeight="Bold" Foreground="#E040FB"/>
+                            <TextBlock Text="Jillyx" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <TextBlock x:Name="PromotionDesc" Grid.Row="1" Text="Bertanggung jawab atas promosi, publikasi kreatif, dan memperluas jangkauan komunitas pengguna." FontSize="11.5" Foreground="#8F9CAE" TextWrapping="Wrap"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Vision and Project Details Card -->
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Margin="0,8,0,12">
+            <StackPanel>
+                <Border Style="{StaticResource GlowCardStyle}" Padding="20" Margin="0,0,0,16">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <StackPanel Grid.Row="0" Margin="0,0,0,12">
+                            <TextBlock x:Name="VisionTitle" Text="VISI &amp; KREDIT APLIKASI" FontSize="12" FontWeight="Bold" Foreground="White"/>
+                            <Separator Background="#1F2840" Height="1" Margin="0,8,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1">
+                            <TextBlock x:Name="VisionDesc" Text="CLAYX-TEAM OPTIMIZE dikembangkan dengan visi menghadirkan kontrol..." 
+                                       FontSize="13" Foreground="White" TextWrapping="Wrap" LineHeight="20" Margin="0,0,0,16"/>
+                            
+                            <TextBlock x:Name="ThankYouText" Text="Tim mengucapkan terima kasih kepada seluruh komunitas..." 
+                                       FontSize="12.5" Foreground="#8F9CAE" TextWrapping="Wrap" LineHeight="18" Margin="0,0,0,24"/>
+
+                            <Separator Background="#1F2840" Height="1" Margin="0,0,0,16"/>
+
+                            <!-- Multilingual Greetings/Credits Banner -->
+                            <TextBlock x:Name="MadeByText" Text="DIBUAT OLEH TIM CLAYX" FontSize="10.5" FontWeight="Bold" Foreground="#FF9100" Margin="0,0,0,10"/>
+                            
+                            <WrapPanel Orientation="Horizontal">
+                                <TextBlock Text="Created by RizzXiters  •  " FontSize="11" Foreground="#5C667A"/>
+                                <TextBlock Text="إنشاء بواسطة RizzXiters  •  " FontSize="11" Foreground="#5C667A"/>
+                                <TextBlock Text="RizzXiters が作成  •  " FontSize="11" Foreground="#5C667A"/>
+                                <TextBlock Text="由 RizzXiters 创建  •  " FontSize="11" Foreground="#5C667A"/>
+                                <TextBlock Text="สร้างโดย RizzXiters  •  " FontSize="11" Foreground="#5C667A"/>
+                                <TextBlock Text="Erstellt von RizzXiters  •  " FontSize="11" Foreground="#5C667A"/>
+                                <TextBlock Text="Criado por RizzXiters  •  " FontSize="11" Foreground="#5C667A"/>
+                                <TextBlock Text="Creado por RizzXiters" FontSize="11" Foreground="#5C667A"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
