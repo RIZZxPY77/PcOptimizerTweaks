@@ -155,7 +155,7 @@ Performance profiles and hardware-based optimization settings.
 ## Gaming Booster Hub
 
 <p align="center">
-<img src="3.png" width="100%">
+<img src="4.png" width="100%">
 </p>
 
 <p align="center">
@@ -167,7 +167,7 @@ Game launcher and performance boosting center.
 ## Mouse & Keyboard Tuning
 
 <p align="center">
-<img src="4.png" width="100%">
+<img src="3.png" width="100%">
 </p>
 
 <p align="center">
