@@ -245,7 +245,7 @@ UI pages and navigation components.
 ## Clone Repository
 
 ```bash
-git clone https://github.com/RIZZxPY77/EXTREME-ANDROID.git
+git clone https://github.com/RIZZxPY77/PcOptimizerTweaks.git
 ```
 
 ## Open Project
